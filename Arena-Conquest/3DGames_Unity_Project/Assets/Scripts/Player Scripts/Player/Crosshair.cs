@@ -7,9 +7,11 @@ using UnityEngine.UI;
 public class Crosshair : MonoBehaviour
 {
     public string enemyTag = "Enemy";
+    public string collectableTaG = "Collectable";
     public Transform CameraTransform;
     public Color EnemyLockColour = Color.red;
-    public Color normalColour = Color.red;
+    public Color collectableLockColour = Color.blue;
+    public Color normalColour = Color.green;
     Image crosshairImage;
     RaycastHit raycastHit;
     // Start is called before the first frame update
@@ -27,6 +29,8 @@ public class Crosshair : MonoBehaviour
         {
             if (raycastHit.transform.tag.Equals(enemyTag))
                 crosshairImage.color = EnemyLockColour;
+            else if(raycastHit.transform.tag.Equals(collectableTaG))
+                crosshairImage.color = collectableLockColour;
             else
                 crosshairImage.color = normalColour;
         }
