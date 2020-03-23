@@ -19,7 +19,7 @@ public class Pickup : MonoBehaviour
     public PickupState pickupState = PickupState.Empty;
     private void Update()
     {
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetKeyUp(KeyCode.E))
         {
             // do the ray cast 
             PickUp();
