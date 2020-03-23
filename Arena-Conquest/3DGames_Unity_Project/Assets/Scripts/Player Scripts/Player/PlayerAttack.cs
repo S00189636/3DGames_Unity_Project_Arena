@@ -6,24 +6,22 @@ public class PlayerAttack : MonoBehaviour
 {
 
     public PickupState PickupState;
-    //public GameObject currentWeapon;
-    public float power = 20;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Weapon currentWeapon;
 
     // Update is called once per frame
+    private void Start()
+    {
+    }
     void Update()
     {
         if (Input.GetButtonUp("Fire1"))
         {
+            currentWeapon= GetComponent<Pickup>().currentWeapon.GetComponent<Weapon>();
             PickupState = GetComponent<Pickup>().pickupState;
             if (PickupState == PickupState.HasWeapon)
             {
-                GetComponent<Pickup>().currentWeapon.GetComponent<Rigidbody>().AddForce( power * (Camera.main.transform.forward + (Vector3.up * Camera.main.transform.rotation.x) ),ForceMode.Impulse);
-                GetComponent<Pickup>().currentWeapon.GetComponent<Rigidbody>().useGravity = true;
+                currentWeapon.Fire((Camera.main.transform.forward + (Vector3.up * Camera.main.transform.rotation.x)));
+                Destroy(currentWeapon);
             }
         }
     }

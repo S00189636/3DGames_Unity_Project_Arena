@@ -8,7 +8,10 @@ public class CameraLook : MonoBehaviour
     public float horizontalSpeed;
     public float verticalSpeed;
     public Camera lookCamera;
+    public GameObject hand;
     private float upRotation;
+    public float maxLookDownAngle = 40;
+    public float maxLookUpAngle = 25;
 
     private void Start()
     {
@@ -23,9 +26,12 @@ public class CameraLook : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * verticalSpeed * Time.deltaTime;
 
         upRotation -= mouseY;
-        upRotation = Mathf.Clamp(upRotation, -30, 25);
+        float upRotationHand = upRotation;
+        upRotation = Mathf.Clamp(upRotation, -maxLookDownAngle, maxLookUpAngle);
 
         lookCamera.transform.localRotation = Quaternion.Euler(upRotation, 0, 0);
+        Quaternion newHandRotation = Quaternion.Euler(upRotationHand + 90, hand.transform.localRotation.y, hand.transform.localRotation.z);
+        hand.transform.localRotation = newHandRotation;
         transform.Rotate(Vector3.up * mouseX);
     }
 }
