@@ -7,21 +7,18 @@ public class PlayerAttack : MonoBehaviour
 
     public PickupState PickupState;
     public Weapon currentWeapon;
-
-    // Update is called once per frame
-    private void Start()
-    {
-    }
+    public string FireButton = "Fire1";
     void Update()
     {
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonUp(FireButton))
         {
-            currentWeapon= GetComponent<Pickup>().currentWeapon.GetComponent<Weapon>();
-            PickupState = GetComponent<Pickup>().pickupState;
+            PickupState =  GetComponent<Pickup>().pickupState;
             if (PickupState == PickupState.HasWeapon)
             {
+                currentWeapon = GetComponent<Pickup>().currentWeapon.GetComponent<Weapon>();
                 currentWeapon.Fire((Camera.main.transform.forward + (Vector3.up * Camera.main.transform.rotation.x)));
                 Destroy(currentWeapon);
+                GetComponent<Pickup>().pickupState = PickupState.Empty;
             }
         }
     }

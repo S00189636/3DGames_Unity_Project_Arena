@@ -64,11 +64,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Collectable.cs" />
+    <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Player\CameraLook.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Player\Crosshair.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Player\Movement.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Player\Pickup.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Player\PlayerAttack.cs" />
+    <Compile Include="Assets\Scripts\SelfDestruct.cs" />
+    <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Scripts\Weapons Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\Weapons Scripts\Throwable.cs" />
     <Compile Include="Assets\Scripts\Weapons Scripts\Weapon.cs" />
     <None Include="Assets\Content\Models\Models Folder.txt" />

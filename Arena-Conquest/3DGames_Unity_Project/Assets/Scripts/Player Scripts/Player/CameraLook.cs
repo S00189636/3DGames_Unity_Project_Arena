@@ -30,7 +30,7 @@ public class CameraLook : MonoBehaviour
         upRotation = Mathf.Clamp(upRotation, -maxLookDownAngle, maxLookUpAngle);
 
         lookCamera.transform.localRotation = Quaternion.Euler(upRotation, 0, 0);
-        Quaternion newHandRotation = Quaternion.Euler(upRotationHand + 90, hand.transform.localRotation.y, hand.transform.localRotation.z);
+        Quaternion newHandRotation = Quaternion.Euler(upRotationHand + 90, ( lookCamera.transform.localPosition.y - hand.transform.localRotation.y )*1.5f, hand.transform.localRotation.z);
         hand.transform.localRotation = newHandRotation;
         transform.Rotate(Vector3.up * mouseX);
     }
