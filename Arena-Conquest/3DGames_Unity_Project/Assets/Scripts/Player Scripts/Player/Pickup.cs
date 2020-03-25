@@ -17,6 +17,8 @@ public class Pickup : MonoBehaviour
     public GameObject currentWeapon;
     public float castDistance = 50f;
     public PickupState pickupState = PickupState.Empty;
+    public float xOffSet;
+
     private void Update()
     {
         if (Input.GetKeyUp(KeyCode.E))
@@ -29,13 +31,13 @@ public class Pickup : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawRay(castStartPosition.position, this.transform.forward  * castDistance);
+        Gizmos.DrawRay(castStartPosition.position, (this.transform.forward /*- new Vector3(xOffSet, 0, 0)*/)  * castDistance);
     }
 
     private void PickUp()
     {
         RaycastHit hit;
-        if (Physics.Raycast(castStartPosition.position, castStartPosition.forward, out hit, castDistance))
+        if (Physics.Raycast(castStartPosition.position, castStartPosition.forward /*- new Vector3(xOffSet,0,0)*/, out hit, castDistance))
         {
             Collectable collectable = hit.transform.gameObject.GetComponent<Collectable>();
             if (collectable == null) return;

@@ -1,19 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!64 &1689555542362195303
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1915720649305034982}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5076798556035486163, guid: 3f9f5ed60aad0e040bb378480b556006, type: 3}
 --- !u!1 &2870062745821477649
 GameObject:
   m_ObjectHideFlags: 0
@@ -23,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2870062745821477652}
-  - component: {fileID: 1689555540757994995}
   - component: {fileID: 141850415159720980}
   - component: {fileID: 1689555540757994992}
   m_Layer: 0
@@ -48,22 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &1689555540757994995
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2870062745821477649}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!136 &141850415159720980
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -91,7 +60,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Spear
-  ThrowPower: 1
+  Damage: 25
+  ThrowPower: 20
   PrjectailPrefab: {fileID: 2703821763015549777, guid: f102fa4915482384bae3b5205b05ad0b,
     type: 3}
 --- !u!1001 &7617817680212019695
@@ -168,12 +138,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f9f5ed60aad0e040bb378480b556006, type: 3}
---- !u!1 &1915720649305034982 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 3f9f5ed60aad0e040bb378480b556006,
-    type: 3}
-  m_PrefabInstance: {fileID: 7617817680212019695}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3228333399020397301 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 3f9f5ed60aad0e040bb378480b556006,
