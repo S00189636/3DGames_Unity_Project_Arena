@@ -2,60 +2,75 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+
 public class Spawner : MonoBehaviour
 {
-    public bool IsRandom;
-    public float MaxObjects;
+
+
     public GameObject[] spawnObjects;
     public Transform[] Locations;
-    List<GameObject> CurrentObjects = new List<GameObject>();
-    int currentLocationIndex = 0;
-    int currentObjectIndex = 0;
-
+    public bool SpawnOnStart;
     public float SpawnEvery;
 
-    GameObject Spawn(int index, int locationIndex)
+    SpawnLocation[] spawnLocations;
+    float timeToSpawn;
+
+
+    private void Start()
     {
-        return Instantiate(spawnObjects[index], Locations[locationIndex].position, Locations[locationIndex].rotation);
+        spawnLocations = new SpawnLocation[Locations.Length];
+        for (int i = 0; i < Locations.Length; i++)
+        {
+            spawnLocations[i] = new SpawnLocation(Locations[i]);
+            if (SpawnOnStart)
+                spawnLocations[i].Spawn(spawnObjects[Random.Range(0, spawnObjects.Length)]);
+        }
+
+        timeToSpawn = Time.time + SpawnEvery;
     }
 
     private void Update()
     {
-
-        if (CurrentObjects.Count < MaxObjects)
+        if (Time.time >= timeToSpawn)
         {
-            Debug.Log($"{CurrentObjects.Count}");
-            switch (IsRandom)
+            timeToSpawn = Time.time + SpawnEvery;
+            foreach (var item in spawnLocations)
             {
-                case false:
-                    CurrentObjects.Add(Spawn(currentObjectIndex, currentLocationIndex));
-                    currentLocationIndex++;
-                    currentLocationIndex = Mathf.Clamp(currentLocationIndex, 0, Locations.Length);
-                    currentObjectIndex++;
-                    currentObjectIndex = Mathf.Clamp(currentObjectIndex, 0, spawnObjects.Length);
-                    break;
-                case true:
-                    currentLocationIndex = Random.Range(0, Locations.Length);
-                    currentObjectIndex = Random.Range(0, spawnObjects.Length);
-                    CurrentObjects.Add(Spawn(currentObjectIndex, currentLocationIndex));
-                    break;
-            }
 
-        }
-        else
-        {
-            int remove = -1;
-            for (int i = 0; i < CurrentObjects.Count; i++)
-            {
-                if (CurrentObjects[i].gameObject == null)
+                if (item.HasWeapon)
                 {
-                    remove = i;
-                    Debug.Log($"we will remove  {i}");
+                    if (item.CurrentSpawnObject == null)
+                        item.HasWeapon = false;
+                    continue;
+                }
+                else
+                {
+                    item.Spawn(spawnObjects[Random.Range(0, spawnObjects.Length)]);
                     break;
                 }
             }
-            if (remove >= 0)
-                CurrentObjects.RemoveAt(remove);
         }
+    }
+
+
+    private class SpawnLocation
+    {
+        Transform Transform;
+        public bool HasWeapon;
+        public GameObject CurrentSpawnObject;
+        public Vector3 location { get { return Transform.position; } }
+        public SpawnLocation(Transform transform)
+        {
+            Transform = transform;
+        }
+
+        public void Spawn(GameObject gameObject)
+        {
+            CurrentSpawnObject = Instantiate(gameObject, location, Transform.rotation);
+            HasWeapon = true;
+        }
+
     }
 }

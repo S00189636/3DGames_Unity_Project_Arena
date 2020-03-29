@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     public float groundCheckDis;
     public LayerMask groundCheckMask;
     public Transform groundCheckTransform;
+    public bool isGrounded;
 
     private CharacterController controller;
     private Vector3 velocity = Vector3.zero;
@@ -25,7 +26,6 @@ public class Movement : MonoBehaviour
     private void Update()
     {
 
-        bool isGrounded;
         Vector3 moveDirection;
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -55,5 +55,14 @@ public class Movement : MonoBehaviour
 
         velocity.y += gravitySpeed * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+
+
+       
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(groundCheckTransform.position, groundCheckDis);
     }
 }
