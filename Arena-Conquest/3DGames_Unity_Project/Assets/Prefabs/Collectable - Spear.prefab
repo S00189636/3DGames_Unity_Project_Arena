@@ -61,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Spear
   Damage: 25
-  ThrowPower: 20
+  ThrowPower: 30
   PrjectailPrefab: {fileID: 2703821763015549777, guid: f102fa4915482384bae3b5205b05ad0b,
     type: 3}
 --- !u!1001 &7617817680212019695

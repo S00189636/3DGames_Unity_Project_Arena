@@ -17,7 +17,7 @@ public class Pickup : MonoBehaviour
     public GameObject currentWeapon;
     public float castDistance = 50f;
     public PickupState pickupState = PickupState.Empty;
-    public float xOffSet;
+    //public float xOffSet;
 
     private void Update()
     {

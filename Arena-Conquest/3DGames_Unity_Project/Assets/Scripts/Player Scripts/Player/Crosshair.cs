@@ -25,8 +25,9 @@ public class Crosshair : MonoBehaviour
     void Update()
     {
 
-        if (Physics.Raycast(CameraTransform.position, CameraTransform.forward, out raycastHit))
+        if (Physics.Raycast(CameraTransform.position /*+ new Vector3(0,-0.4f,0)*/, CameraTransform.forward , out raycastHit))
         {
+            //Debug.Log($"{CameraTransform.forward}");
             if (raycastHit.transform.tag.Equals(enemyTag))
                 crosshairImage.color = EnemyLockColour;
             else if(raycastHit.transform.tag.Equals(collectableTaG))
@@ -41,7 +42,7 @@ public class Crosshair : MonoBehaviour
         if (crosshairImage != null)
         {
             Gizmos.color = crosshairImage.color;
-            Gizmos.DrawLine(transform.parent.position, raycastHit.point);
+            Gizmos.DrawLine(CameraTransform.position/* + new Vector3(0, -0.4f, 0)*/, raycastHit.point);
         }
 
     }

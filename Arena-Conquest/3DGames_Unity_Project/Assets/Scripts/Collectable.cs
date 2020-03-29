@@ -12,4 +12,7 @@ public class Collectable : MonoBehaviour
 {
     public PickupType PickupType {  get; protected set; }
     public string Name = "nothing";
+
+
+
 }
