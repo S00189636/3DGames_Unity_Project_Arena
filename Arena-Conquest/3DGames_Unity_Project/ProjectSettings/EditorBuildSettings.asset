@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Sci-Fi Level.unity
+    guid: 49f80ace2c6d9de4fad9cb3de8867d59
   m_configObjects: {}
