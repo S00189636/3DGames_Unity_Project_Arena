@@ -45,10 +45,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.10167539
-  m_Height: 0.34970784
+  m_Radius: 0.21483026
+  m_Height: 0.5957036
   m_Direction: 1
-  m_Center: {x: 0, y: 1.0976909, z: 0.0033385754}
+  m_Center: {x: 0.010203823, y: 1.3493009, z: 0.0033385754}
 --- !u!54 &2606921709228852556
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -92,20 +92,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shooter: {fileID: 0}
   Damage: 0
---- !u!64 &7263114286100444931
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4427880889564323118}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8409771424858943459, guid: 5b68d4dfebfdf4a40a52a6aac41e8ad2, type: 3}
 --- !u!54 &2793071548858287170
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -122,6 +108,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 110
   m_CollisionDetection: 0
+--- !u!136 &4298597597938322890
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4427880889564323118}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.023273794
+  m_Height: 0.23789763
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.030339932, z: 0}
 --- !u!1001 &5643875802898990119
 PrefabInstance:
   m_ObjectHideFlags: 0
