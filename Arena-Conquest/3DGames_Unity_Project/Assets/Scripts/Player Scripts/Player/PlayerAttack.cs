@@ -8,6 +8,7 @@ public class PlayerAttack : MonoBehaviour
     public PickupState PickupState;
     public Weapon currentWeapon;
     public string FireButton = "Fire1";
+    public Transform FirePoint;
     void Update()
     {
         if (Input.GetButtonUp(FireButton))
@@ -16,7 +17,7 @@ public class PlayerAttack : MonoBehaviour
             if (PickupState == PickupState.HasWeapon)
             {
                 currentWeapon = GetComponent<Pickup>().currentWeapon.GetComponent<Weapon>();
-                currentWeapon.Fire((Camera.main.transform.forward + (Vector3.up * Camera.main.transform.rotation.x)));
+                currentWeapon.Fire(FirePoint.forward);
                 Destroy(currentWeapon);
                 GetComponent<Pickup>().pickupState = PickupState.Empty;
             }

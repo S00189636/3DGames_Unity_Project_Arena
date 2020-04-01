@@ -32,29 +32,50 @@ public class Pickup : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawRay(castStartPosition.position, (this.transform.forward /*- new Vector3(xOffSet, 0, 0)*/)  * castDistance);
+
+        Gizmos.DrawWireSphere(castStartPosition.position, castDistance);
+
     }
 
     private void PickUp()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(castStartPosition.position, castStartPosition.forward /*- new Vector3(xOffSet,0,0)*/, out hit, castDistance))
+        Collider[] colliders;
+        colliders = Physics.OverlapSphere(castStartPosition.position, castDistance);
+
+        foreach (var item in colliders)
         {
-            Collectable collectable = hit.transform.gameObject.GetComponent<Collectable>();
-            if (collectable == null) return;
+            Collectable collectable = item.transform.gameObject.GetComponent<Collectable>();
+            if (collectable == null) continue;
             if (collectable.PickupType == PickupType.Collectable)
             {
                 //if (pickupState == PickupState.HasWeapon) return;
-                GameObject pickedUp = Instantiate(hit.transform.gameObject,hand.transform.position,hand.transform.rotation,hand.transform);
+                GameObject pickedUp = Instantiate(item.transform.gameObject, hand.transform.position, hand.transform.rotation, hand.transform);
                 Destroy(currentWeapon.gameObject);
                 currentWeapon = pickedUp;
                 pickupState = PickupState.HasWeapon;
-                Destroy(hit.transform.gameObject);
+                Destroy(item.transform.gameObject);
             }
-            else if(collectable.PickupType == PickupType.Consumable)
-            {
-                // use it 
-            }
-            
         }
+
+        //RaycastHit hit;
+        //if (Physics.SphereCast(castStartPosition.position,castDistance, castStartPosition.forward, out hit))
+        //{
+        //    Collectable collectable = hit.transform.gameObject.GetComponent<Collectable>();
+        //    if (collectable == null) return;
+        //    if (collectable.PickupType == PickupType.Collectable)
+        //    {
+        //        //if (pickupState == PickupState.HasWeapon) return;
+        //        GameObject pickedUp = Instantiate(hit.transform.gameObject,hand.transform.position,hand.transform.rotation,hand.transform);
+        //        Destroy(currentWeapon.gameObject);
+        //        currentWeapon = pickedUp;
+        //        pickupState = PickupState.HasWeapon;
+        //        Destroy(hit.transform.gameObject);
+        //    }
+        //    else if(collectable.PickupType == PickupType.Consumable)
+        //    {
+        //        // use it 
+        //    }
+            
+        //}
     }
 }

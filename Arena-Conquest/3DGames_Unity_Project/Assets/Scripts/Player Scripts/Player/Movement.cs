@@ -27,8 +27,9 @@ public class Movement : MonoBehaviour
     {
 
         Vector3 moveDirection;
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        //float horizontal = Input.GetAxis("Horizontal");
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
 
         moveDirection = transform.right * horizontal;
         moveDirection.Normalize();
@@ -56,7 +57,7 @@ public class Movement : MonoBehaviour
         velocity.y += gravitySpeed * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
 
-
+        
        
     }
 

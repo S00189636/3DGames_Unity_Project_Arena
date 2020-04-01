@@ -260,17 +260,17 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>C:/Users/PC/Documents/GitHub/3DGames_Unity_Project/Arena-Conquest/3DGames_Unity_Project/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+    <Reference Include="Substance.Game">
+      <HintPath>C:/Users/PC/Documents/GitHub/3DGames_Unity_Project/Arena-Conquest/3DGames_Unity_Project/Assets/Allegorithmic/Plugins/Substance.Game.dll</HintPath>
     </Reference>
     <Reference Include="Substance.Editor">
       <HintPath>C:/Users/PC/Documents/GitHub/3DGames_Unity_Project/Arena-Conquest/3DGames_Unity_Project/Assets/Allegorithmic/Plugins/Substance/Substance Engine/Editor/Substance.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Substance.Game">
-      <HintPath>C:/Users/PC/Documents/GitHub/3DGames_Unity_Project/Arena-Conquest/3DGames_Unity_Project/Assets/Allegorithmic/Plugins/Substance.Game.dll</HintPath>
-    </Reference>
     <Reference Include="SourceUnityLib">
       <HintPath>C:/Users/PC/Documents/GitHub/3DGames_Unity_Project/Arena-Conquest/3DGames_Unity_Project/Assets/Allegorithmic/Plugins/Substance/Substance Source/Editor/SourceUnityLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>C:/Users/PC/Documents/GitHub/3DGames_Unity_Project/Arena-Conquest/3DGames_Unity_Project/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.3f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
