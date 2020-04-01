@@ -9,11 +9,11 @@ public class Throwable : Weapon
     public override void Fire(Vector3 direction)
     {
         GameObject Prjectail = Instantiate(PrjectailPrefab,transform.position,transform.rotation);
-
-        Prjectail.GetComponent<Rigidbody>().useGravity = true;
-        Prjectail.GetComponent<Projectile>().Shooter = this.gameObject;
+        Prjectail.GetComponent<Rigidbody>().AddForce(ThrowPower * direction, ForceMode.Impulse);
         Prjectail.GetComponent<Projectile>().direction = direction;
-        Prjectail.GetComponent<Projectile>().Speed = ThrowPower;
+        Prjectail.GetComponent<Projectile>().Speed = ThrowPower/2;
+        //Prjectail.GetComponent<Rigidbody>().useGravity = true;
+        Prjectail.GetComponent<Projectile>().Shooter = this.gameObject;
         Prjectail.GetComponent<Projectile>().Damage = Damage;
         Destroy(this.gameObject);
     }

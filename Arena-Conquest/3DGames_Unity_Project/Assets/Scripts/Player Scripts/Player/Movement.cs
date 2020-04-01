@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     public float jumpHeight = 8f;
     public float groundCheckDis;
     public LayerMask groundCheckMask;
+    public LayerMask groundDamageMask;
     public Transform groundCheckTransform;
     public bool isGrounded;
 
@@ -43,6 +44,10 @@ public class Movement : MonoBehaviour
             gravitySpeed *= -1;
         // checking for ground 
         isGrounded = Physics.CheckSphere(groundCheckTransform.position, groundCheckDis, groundCheckMask);
+        if(Physics.CheckSphere(groundCheckTransform.position, groundCheckDis, groundDamageMask))
+        {
+            GetComponent<Health>().TakeDamage(0.01f);
+        }
 
         if (isGrounded && velocity.y < 0)
             velocity.y = -jumpHeight;

@@ -13,8 +13,10 @@ public class Projectile : MonoBehaviour
     bool move = true;
     private void Update()
     {
+
         if (move)
             body.velocity = direction * Speed;
+
     }
 
 
@@ -24,6 +26,7 @@ public class Projectile : MonoBehaviour
         move = false;
         body.freezeRotation = true;
         body.velocity = Vector3.zero;
+        body.useGravity = false;
 
         //Debug.Log($"{this.transform.name} - hit - {collision.transform.name}");
         if (collision.transform.tag.Contains("Enemy"))
