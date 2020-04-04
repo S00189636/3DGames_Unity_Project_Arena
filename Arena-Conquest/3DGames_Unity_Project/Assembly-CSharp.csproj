@@ -63,7 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
+    <Compile Include="Assets\Content\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
     <Compile Include="Assets\Samples\High Definition RP\7.1.8\Procedural Sky\Runtime\ProceduralSky\ProceduralSky.cs" />
     <Compile Include="Assets\Samples\High Definition RP\7.1.8\Procedural Sky\Runtime\ProceduralSky\ProceduralSkyRenderer.cs" />
     <Compile Include="Assets\Scripts\Collectable.cs" />
@@ -79,20 +79,20 @@
     <Compile Include="Assets\Scripts\Weapons Scripts\Throwable.cs" />
     <Compile Include="Assets\Scripts\Weapons Scripts\Weapon.cs" />
     <None Include="Assets\Allegorithmic\Plugins\EULA.txt" />
-    <None Include="Assets\Lava_Flowing_Shader\Shaders\Diffuse_Lava_Distort.shader" />
+    <None Include="Assets\Content\Lava_Flowing_Shader\Shaders\Diffuse_Lava_Distort.shader" />
     <None Include="Assets\Content\Models\Models Folder.txt" />
     <None Include="Assets\Scripts\Weapons Scripts\Weapons Scripts Folder.txt" />
     <None Include="Assets\Scripts\AI Scripts\AI Scripst.txt" />
-    <None Include="Assets\Lava_Flowing_Shader\ReadMe.txt" />
+    <None Include="Assets\Content\Lava_Flowing_Shader\ReadMe.txt" />
     <None Include="Assets\Content\Sprites\Sprites Folder.txt" />
-    <None Include="Assets\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort_Transparent.shader" />
+    <None Include="Assets\Content\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort_Transparent.shader" />
     <None Include="Assets\Content\Fonts\Fonts Folder.txt" />
-    <None Include="Assets\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort.shader" />
+    <None Include="Assets\Content\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort.shader" />
     <None Include="Assets\Allegorithmic\Plugins\engine_build_info.txt" />
     <None Include="Assets\Content\Materials\Materials Folder.txt" />
     <None Include="Assets\Samples\High Definition RP\7.1.8\Procedural Sky\Runtime\ProceduralSky\Resources\ProceduralSky.shader" />
     <None Include="Assets\Prefabs\prefabsFolder.txt" />
-    <None Include="Assets\Lava_Flowing_Shader\Shaders\Unlit_Lava_Simple.shader" />
+    <None Include="Assets\Content\Lava_Flowing_Shader\Shaders\Unlit_Lava_Simple.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/PC/Documents/GitHub/3DGames_Unity_Project/Arena-Conquest/3DGames_Unity_Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
