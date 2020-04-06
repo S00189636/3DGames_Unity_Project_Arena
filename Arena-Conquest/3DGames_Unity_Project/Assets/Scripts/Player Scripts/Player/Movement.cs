@@ -18,11 +18,16 @@ public class Movement : MonoBehaviour
     private CharacterController controller;
     private Vector3 velocity = Vector3.zero;
 
+    event Death OnDeath;
+
+
+
     private void Start()
     {
         controller = GetComponent<CharacterController>();
+        GetComponent<Health>().OnDeath += OnDeath;
+        
     }
-
 
     private void Update()
     {
@@ -60,10 +65,7 @@ public class Movement : MonoBehaviour
         }
 
         velocity.y += gravitySpeed * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
-
-        
-       
+        controller.Move(velocity * Time.deltaTime);  
     }
 
     private void OnDrawGizmos()
@@ -71,4 +73,7 @@ public class Movement : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(groundCheckTransform.position, groundCheckDis);
     }
+
+
+    
 }

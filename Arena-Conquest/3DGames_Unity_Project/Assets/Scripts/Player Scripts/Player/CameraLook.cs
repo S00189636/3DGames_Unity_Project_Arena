@@ -33,6 +33,7 @@ public class CameraLook : MonoBehaviour
         Quaternion newHandRotation = Quaternion.Euler(upRotationHand + 90, ( lookCamera.transform.localPosition.y - hand.transform.localRotation.y )*1.5f, hand.transform.localRotation.z);
         hand.transform.localRotation = newHandRotation;
         transform.Rotate(Vector3.up * mouseX);
+
     }
 }
 

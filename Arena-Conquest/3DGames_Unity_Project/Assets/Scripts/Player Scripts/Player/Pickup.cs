@@ -28,6 +28,7 @@ public class Pickup : MonoBehaviour
         }
     }
 
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -56,26 +57,5 @@ public class Pickup : MonoBehaviour
                 Destroy(item.transform.gameObject);
             }
         }
-
-        //RaycastHit hit;
-        //if (Physics.SphereCast(castStartPosition.position,castDistance, castStartPosition.forward, out hit))
-        //{
-        //    Collectable collectable = hit.transform.gameObject.GetComponent<Collectable>();
-        //    if (collectable == null) return;
-        //    if (collectable.PickupType == PickupType.Collectable)
-        //    {
-        //        //if (pickupState == PickupState.HasWeapon) return;
-        //        GameObject pickedUp = Instantiate(hit.transform.gameObject,hand.transform.position,hand.transform.rotation,hand.transform);
-        //        Destroy(currentWeapon.gameObject);
-        //        currentWeapon = pickedUp;
-        //        pickupState = PickupState.HasWeapon;
-        //        Destroy(hit.transform.gameObject);
-        //    }
-        //    else if(collectable.PickupType == PickupType.Consumable)
-        //    {
-        //        // use it 
-        //    }
-            
-        //}
     }
 }

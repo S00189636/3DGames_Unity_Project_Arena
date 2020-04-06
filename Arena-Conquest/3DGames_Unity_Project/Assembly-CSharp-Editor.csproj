@@ -331,12 +331,6 @@
     <Reference Include="Substance.Game">
       <HintPath>C:/Users/PC/Documents/GitHub/3DGames_Unity_Project/Arena-Conquest/3DGames_Unity_Project/Assets/Allegorithmic/Plugins/Substance.Game.dll</HintPath>
     </Reference>
-    <Reference Include="Substance.Editor">
-      <HintPath>C:/Users/PC/Documents/GitHub/3DGames_Unity_Project/Arena-Conquest/3DGames_Unity_Project/Assets/Allegorithmic/Plugins/Substance/Substance Engine/Editor/Substance.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="SourceUnityLib">
-      <HintPath>C:/Users/PC/Documents/GitHub/3DGames_Unity_Project/Arena-Conquest/3DGames_Unity_Project/Assets/Allegorithmic/Plugins/Substance/Substance Source/Editor/SourceUnityLib.dll</HintPath>
-    </Reference>
     <Reference Include="ICSharpCode.NRefactory">
       <HintPath>C:/Users/PC/Documents/GitHub/3DGames_Unity_Project/Arena-Conquest/3DGames_Unity_Project/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
