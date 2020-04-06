@@ -61,15 +61,6 @@ public class EnemyBase : MonoBehaviour
 
             // Check if target is in FOV
             TargetInFOV = Angle <= FieldOfView;
-
-            //if (Angle <= FieldOfView)
-            //{
-            //    TargetInFOV = true;
-            //}
-            //else
-            //{
-            //    TargetInFOV = false;
-            //}
         }
         else
         {

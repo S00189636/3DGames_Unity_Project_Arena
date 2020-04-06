@@ -8,7 +8,7 @@ public class Health : MonoBehaviour
 {
     public float FullHealth;
     [SerializeField]
-    float currentHealth;
+    public float currentHealth { get; private set; }
     public event Death OnDeath;
     public event TakingDamage OnTakingDamage ;
 
@@ -21,13 +21,13 @@ public class Health : MonoBehaviour
 
         currentHealth -= amount;
         currentHealth = Mathf.Clamp(currentHealth, -0.1f, FullHealth);
+        if (OnTakingDamage != null)
+            OnTakingDamage(amount);
         if (currentHealth <= 0)
         {
             if (OnDeath != null)
                 OnDeath();
         }
-        else if (OnTakingDamage != null)
-            OnTakingDamage(amount);
     }
 
 
