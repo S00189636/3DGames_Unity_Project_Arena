@@ -1330,7 +1330,7 @@ GameObject:
   - component: {fileID: 769087662}
   m_Layer: 8
   m_Name: FloatingPlatform
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1363,7 +1363,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2699097769926876243}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 7e8c7c82983231b40b0db515ba33633c, type: 2}
   m_CullingMode: 0
@@ -1460,7 +1460,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 64.23573
+  m_Intensity: 55.704227
   m_Range: 9.41
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1529,7 +1529,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 807.21
+  m_Intensity: 700
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -1639,6 +1639,11 @@ PrefabInstance:
     - target: {fileID: -6236743471014415788, guid: 14a49af5615ff454d877e60a6f25b929,
         type: 3}
       propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -6236743471014415788, guid: 14a49af5615ff454d877e60a6f25b929,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 14a49af5615ff454d877e60a6f25b929,

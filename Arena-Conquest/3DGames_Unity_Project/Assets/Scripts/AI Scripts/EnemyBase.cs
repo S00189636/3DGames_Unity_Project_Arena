@@ -1,0 +1,107 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public enum EnemyState
+{
+    Idle,
+    Moving,
+    LastSpottedTracking,
+    Patrolling,
+    Attacking,
+    Dead
+}
+
+public class EnemyBase : MonoBehaviour
+{
+    public float AttackDistance;
+    public EnemyState EnemyCurrentState;
+    public string TargetTag = "Player";
+    public  GameObject Player;
+    public Transform CenterPoint;
+
+    //Layers
+    public LayerMask TargetMask;
+
+     // Position
+    public Vector3 CurrentPosition;
+
+    // Tracking
+    public float FieldOfView = 45;
+    public float VisionDistance = 50;
+    public bool TargetInFOV = false;
+    public Vector3 TargetLastSpotted;
+    public float TrackingTimer = 5;
+    public float TimeToPatrol;
+
+    
+    
+    public virtual void Start()
+    {
+        Player = GameObject.FindGameObjectWithTag(TargetTag);
+
+    }
+
+    public virtual void Update()
+    {
+        TrackTarget();
+    }
+
+    public void TrackTarget()
+    {
+        Collider[] TargetHits;
+        TargetHits = Physics.OverlapSphere(CenterPoint.position, VisionDistance, TargetMask);
+
+        if (TargetHits.Length > 0)
+        {
+            // Find direstion of target
+            Vector3 PlayerDirection = TargetHits[0].transform.position - CenterPoint.position;
+            // Calculates angle from z-axis to target position
+            float Angle = Vector3.Angle(CenterPoint.forward, PlayerDirection);
+
+            // Check if target is in FOV
+            TargetInFOV = Angle <= FieldOfView;
+
+            //if (Angle <= FieldOfView)
+            //{
+            //    TargetInFOV = true;
+            //}
+            //else
+            //{
+            //    TargetInFOV = false;
+            //}
+        }
+        else
+        {
+            TargetInFOV = false;
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Vector3 Line1;
+        Vector3 Line2;
+
+        // Sphere Vision
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(CenterPoint.position, VisionDistance);
+
+        // FOV
+        Gizmos.color = Color.yellow;
+        Line1 = Quaternion.AngleAxis(FieldOfView, CenterPoint.up) * CenterPoint.forward * VisionDistance;
+        Line2 = Quaternion.AngleAxis(-FieldOfView, CenterPoint.up) * CenterPoint.forward * VisionDistance;
+
+        // Draw FOV
+        Gizmos.DrawRay(CenterPoint.position, Line1);
+        Gizmos.DrawRay(CenterPoint.position, Line2);
+
+        // Draw Line to target
+        if (TargetInFOV)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawRay(CenterPoint.position, ((Player.transform.position + Vector3.up) - CenterPoint.position).normalized * VisionDistance);
+        }
+        
+
+    }
+}

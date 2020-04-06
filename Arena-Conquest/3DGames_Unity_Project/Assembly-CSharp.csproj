@@ -66,6 +66,10 @@
     <Compile Include="Assets\Content\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
     <Compile Include="Assets\Samples\High Definition RP\7.1.8\Procedural Sky\Runtime\ProceduralSky\ProceduralSky.cs" />
     <Compile Include="Assets\Samples\High Definition RP\7.1.8\Procedural Sky\Runtime\ProceduralSky\ProceduralSkyRenderer.cs" />
+    <Compile Include="Assets\Scripts\AI Scripts\AINAVMovement.cs" />
+    <Compile Include="Assets\Scripts\AI Scripts\EnemyBase.cs" />
+    <Compile Include="Assets\Scripts\AI Scripts\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\AI Scripts\FollowTarget.cs" />
     <Compile Include="Assets\Scripts\Collectable.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Player\CameraLook.cs" />
@@ -75,6 +79,7 @@
     <Compile Include="Assets\Scripts\Player Scripts\Player\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\SelfDestruct.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Scripts\Star.cs" />
     <Compile Include="Assets\Scripts\Weapons Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\Weapons Scripts\Throwable.cs" />
     <Compile Include="Assets\Scripts\Weapons Scripts\Weapon.cs" />

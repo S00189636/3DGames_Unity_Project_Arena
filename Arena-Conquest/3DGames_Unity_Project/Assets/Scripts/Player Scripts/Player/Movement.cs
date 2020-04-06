@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     public float groundCheckDis;
     public LayerMask groundCheckMask;
     public LayerMask groundDamageMask;
+    public LayerMask PlatformMask;
     public Transform groundCheckTransform;
     public bool isGrounded;
 
@@ -26,7 +27,7 @@ public class Movement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         GetComponent<Health>().OnDeath += OnDeath;
-        
+
     }
 
     private void Update()
@@ -45,17 +46,29 @@ public class Movement : MonoBehaviour
         moveDirection.Normalize();
         controller.Move(moveDirection * Time.deltaTime * verticalSpeed);
 
-        if (gravitySpeed > 0)
-            gravitySpeed *= -1;
+
         // checking for ground 
         isGrounded = Physics.CheckSphere(groundCheckTransform.position, groundCheckDis, groundCheckMask);
-        if(Physics.CheckSphere(groundCheckTransform.position, groundCheckDis, groundDamageMask))
+        if (Physics.CheckSphere(groundCheckTransform.position, groundCheckDis, groundDamageMask))
         {
             GetComponent<Health>().TakeDamage(0.01f);
         }
 
+        //if (Physics.CheckSphere(groundCheckTransform.position, groundCheckDis, PlatformMask))
+        //{
+        //    //this.transform.parent = GameObject.FindGameObjectWithTag("Platform").transform;
+        //    this.transform.position = GameObject.FindGameObjectWithTag("Platform").transform.position + this.transform.position;
+        //    Debug.Log("On Platform");
+
+        //}
+
         if (isGrounded && velocity.y < 0)
             velocity.y = -jumpHeight;
+
+        velocity.y += gravitySpeed * Time.deltaTime;
+
+        if (gravitySpeed > 0)
+            gravitySpeed *= -1;
 
         // jump controll 
         if (isGrounded && Input.GetButton("Jump"))
@@ -64,16 +77,20 @@ public class Movement : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravitySpeed);
         }
 
-        velocity.y += gravitySpeed * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);  
+
+        controller.Move(velocity * Time.deltaTime);
+
     }
 
-    private void OnDrawGizmos()
+
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(groundCheckTransform.position, groundCheckDis);
+
     }
 
 
-    
+
+
 }
