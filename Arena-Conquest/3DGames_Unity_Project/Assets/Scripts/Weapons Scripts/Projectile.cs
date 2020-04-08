@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
         body.useGravity = false;
 
         //Debug.Log($"{this.transform.name} - hit - {collision.transform.name}");
-        if (collision.transform.tag.Contains("Enemy"))
+        if (collision.transform.tag.Contains("Enemy") || collision.transform.tag.Contains("Player"))
         {
             collision.gameObject.GetComponent<Health>().TakeDamage(Damage);
         }
