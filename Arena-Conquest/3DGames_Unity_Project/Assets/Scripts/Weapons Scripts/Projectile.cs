@@ -5,18 +5,18 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class Projectile : MonoBehaviour
 {
-    public GameObject Shooter;
+    
+    public string EnemyTag;
     public float Damage;
     public float Speed;
-    public Vector3 direction;
+    public Vector3 direction { get; set; }
+    public GameObject Shooter { get; set; }
     Rigidbody body { get { return this.GetComponent<Rigidbody>(); } }
     bool move = true;
     private void Update()
     {
-
         if (move)
             body.velocity = direction * Speed;
-
     }
 
 
@@ -27,9 +27,9 @@ public class Projectile : MonoBehaviour
         body.freezeRotation = true;
         body.velocity = Vector3.zero;
         body.useGravity = false;
-
+        transform.parent = collision.transform;
         //Debug.Log($"{this.transform.name} - hit - {collision.transform.name}");
-        if (collision.transform.tag.Contains("Enemy") || collision.transform.tag.Contains("Player"))
+        if (collision.transform.tag.Contains(EnemyTag))
         {
             collision.gameObject.GetComponent<Health>().TakeDamage(Damage);
         }

@@ -6,8 +6,10 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Image))]
 public class Crosshair : MonoBehaviour
 {
+    public LayerMask layerMask;
+    public GameObject LandMarker;
     public string enemyTag = "Enemy";
-    public string collectableTaG = "Collectable";
+    public string collectableTag = "Collectable";
     public Transform CameraTransform;
     public Color EnemyLockColour = Color.red;
     public Color collectableLockColour = Color.blue;
@@ -25,15 +27,19 @@ public class Crosshair : MonoBehaviour
     void Update()
     {
 
-        if (Physics.Raycast(CameraTransform.position /*+ new Vector3(0,-0.4f,0)*/, CameraTransform.forward , out raycastHit))
+        if (Physics.Raycast(CameraTransform.position, CameraTransform.forward , out raycastHit, Mathf.Infinity, layerMask))
         {
-            //Debug.Log($"{CameraTransform.forward}");
+
             if (raycastHit.transform.tag.Equals(enemyTag))
                 crosshairImage.color = EnemyLockColour;
-            else if(raycastHit.transform.tag.Equals(collectableTaG))
+            else if(raycastHit.transform.tag.Equals(collectableTag))
                 crosshairImage.color = collectableLockColour;
             else
                 crosshairImage.color = normalColour;
+
+            
+            LandMarker.transform.rotation = Quaternion.LookRotation(-raycastHit.normal);
+            LandMarker.transform.position = raycastHit.point + (raycastHit.normal.normalized /100 );
         }
         else crosshairImage.color = normalColour;
     }

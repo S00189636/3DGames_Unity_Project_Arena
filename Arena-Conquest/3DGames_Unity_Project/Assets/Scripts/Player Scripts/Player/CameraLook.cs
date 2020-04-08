@@ -21,6 +21,11 @@ public class CameraLook : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            Cursor.visible = !Cursor.visible;
+            Cursor.lockState = Cursor.visible ? CursorLockMode.None : CursorLockMode.Locked;
+        }
 
         float mouseX = Input.GetAxis("Mouse X") * horizontalSpeed * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * verticalSpeed * Time.deltaTime;

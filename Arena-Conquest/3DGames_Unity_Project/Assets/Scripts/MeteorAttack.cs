@@ -28,16 +28,15 @@ public class MeteorAttack : MonoBehaviour
         switch (current)
         {
             case state.Spinning:
-                Debug.Log("i am spinning now :D");
+                //Debug.Log("i am spinning now :D");
                 break;
             case state.Attacking:
                 if (timeToSpawn <= Time.time)
                 {
-                    Debug.Log("Boom!!" + counter);
+                   // Debug.Log("Boom!!" + counter);
                     GameObject projectile = Instantiate(MeteorPrefab, transform.position, transform.rotation);
                     projectile.transform.LookAt(Player.transform.position);
                     projectile.GetComponent<Projectile>().direction = projectile.transform.forward;
-                    projectile.GetComponent<Projectile>().Speed = MeteorSpeed;
                     projectile.GetComponent<Rigidbody>().useGravity = false;
                     projectile.GetComponent<Projectile>().Shooter = this.gameObject;
                     projectile.GetComponent<Projectile>().Damage = Damage;
@@ -51,8 +50,8 @@ public class MeteorAttack : MonoBehaviour
                 }
                 break;
             case state.CoolDown:
-                Debug.Log("making it larg again");
-                Debug.Log("it's larg now ");
+               // Debug.Log("making it larg again");
+               // Debug.Log("it's larg now ");
                 current = state.Spinning;
                 break;
         }

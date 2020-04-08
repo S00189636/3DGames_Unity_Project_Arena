@@ -11,7 +11,7 @@ public class PlayerAttack : MonoBehaviour
     public Transform FirePoint;
     void Update()
     {
-        if (Input.GetButtonUp(FireButton))
+        if (Input.GetButton(FireButton))
         {
             PickupState =  GetComponent<Pickup>().pickupState;
             if (PickupState == PickupState.HasWeapon)

@@ -14,7 +14,7 @@ public class Pickup : MonoBehaviour
 
     public Transform castStartPosition;
     public GameObject hand;
-    public GameObject currentWeapon;
+    public GameObject currentWeapon = null;
     public float castDistance = 50f;
     public PickupState pickupState = PickupState.Empty;
     //public float xOffSet;
@@ -26,13 +26,14 @@ public class Pickup : MonoBehaviour
             // do the ray cast 
             PickUp();
         }
+
     }
 
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawRay(castStartPosition.position, (this.transform.forward /*- new Vector3(xOffSet, 0, 0)*/)  * castDistance);
+        Gizmos.DrawRay(castStartPosition.position, (this.transform.forward /*- new Vector3(xOffSet, 0, 0)*/) * castDistance);
 
         Gizmos.DrawWireSphere(castStartPosition.position, castDistance);
 
@@ -51,7 +52,8 @@ public class Pickup : MonoBehaviour
             {
                 //if (pickupState == PickupState.HasWeapon) return;
                 GameObject pickedUp = Instantiate(item.transform.gameObject, hand.transform.position, hand.transform.rotation, hand.transform);
-                Destroy(currentWeapon.gameObject);
+                if (currentWeapon != null)
+                    Destroy(currentWeapon.gameObject);
                 currentWeapon = pickedUp;
                 pickupState = PickupState.HasWeapon;
                 Destroy(item.transform.gameObject);
