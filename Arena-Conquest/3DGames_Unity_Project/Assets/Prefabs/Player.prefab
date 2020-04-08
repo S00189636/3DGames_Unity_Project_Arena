@@ -185,8 +185,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d728580532b0e174a9a29de807bbc675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 12544
+  LandMarker: {fileID: 0}
   enemyTag: Enemy
-  collectableTaG: Collectable
+  collectableTag: Collectable
   CameraTransform: {fileID: 5079081747604508773}
   EnemyLockColour: {r: 1, g: 0, b: 0, a: 1}
   collectableLockColour: {r: 0, g: 0, b: 1, a: 1}
@@ -344,8 +348,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3309b1232dfb6442a6295ef72adc027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalSpeed: 5
-  verticalSpeed: 5
+  horizontalSpeed: 7
+  verticalSpeed: 7
   gravitySpeed: 40
   jumpHeight: 1.8
   groundCheckDis: 0.45
@@ -411,6 +415,7 @@ MonoBehaviour:
   currentWeapon: {fileID: 0}
   FireButton: Fire1
   FirePoint: {fileID: 5079081747604508773}
+  CrosshairLandMark: {fileID: 0}
 --- !u!23 &895547900
 MeshRenderer:
   m_ObjectHideFlags: 0

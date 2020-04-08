@@ -35,11 +35,12 @@ public class MeteorAttack : MonoBehaviour
                 {
                    // Debug.Log("Boom!!" + counter);
                     GameObject projectile = Instantiate(MeteorPrefab, transform.position, transform.rotation);
-                    projectile.transform.LookAt(Player.transform.position);
-                    projectile.GetComponent<Projectile>().direction = projectile.transform.forward;
+                    projectile.transform.LookAt(Player.transform.position + Vector3.up);
+                    //projectile.GetComponent<Projectile>().velocity = projectile.transform.forward;
                     projectile.GetComponent<Rigidbody>().useGravity = false;
                     projectile.GetComponent<Projectile>().Shooter = this.gameObject;
                     projectile.GetComponent<Projectile>().Damage = Damage;
+                    projectile.GetComponent<Projectile>().Speed = MeteorSpeed;
                     counter++;
                     timeToSpawn = Time.time + CoolDown;
                     if (counter >= numberOfAttacks)

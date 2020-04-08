@@ -10,7 +10,7 @@ public class Throwable : Weapon
     {
         GameObject Prjectail = Instantiate(PrjectailPrefab,transform.position,transform.rotation);
         Prjectail.GetComponent<Rigidbody>().AddForce(ThrowPower * direction, ForceMode.Impulse);
-        Prjectail.GetComponent<Projectile>().direction = direction;
+        Prjectail.GetComponent<Projectile>().Direction = direction;
         Prjectail.GetComponent<Projectile>().Speed = ThrowPower/2;
         //Prjectail.GetComponent<Rigidbody>().useGravity = true;
         Prjectail.GetComponent<Projectile>().Shooter = this.gameObject;

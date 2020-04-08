@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70dec58d2e836da479f1bcd3a2ff5811, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 3.3
+  time: 5
 --- !u!114 &3140821910845700900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,11 +90,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ffeaeaa722e7384a8061a0eb41d518d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Shooter: {fileID: 0}
   EnemyTag: Enemy
-  Damage: 15
-  Speed: 65
-  direction: {x: 0, y: 0, z: 0}
+  Damage: 0
+  Speed: 0
 --- !u!54 &2793071548858287170
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -155,12 +153,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 5b68d4dfebfdf4a40a52a6aac41e8ad2,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5b68d4dfebfdf4a40a52a6aac41e8ad2,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5b68d4dfebfdf4a40a52a6aac41e8ad2,
         type: 3}

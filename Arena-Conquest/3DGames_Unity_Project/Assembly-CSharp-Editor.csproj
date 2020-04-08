@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Samples\High Definition RP\7.1.8\Procedural Sky\Editor\ProceduralSky\ProceduralSkyEditor.cs" />
+    <Compile Include="Assets\Unity-Logs-Viewer\Reporter\Editor\ReporterEditor.cs" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>C:/Users/PC/Documents/GitHub/3DGames_Unity_Project_Arena/Arena-Conquest/3DGames_Unity_Project/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>

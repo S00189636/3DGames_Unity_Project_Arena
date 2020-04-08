@@ -9,6 +9,7 @@ public class PlayerAttack : MonoBehaviour
     public Weapon currentWeapon;
     public string FireButton = "Fire1";
     public Transform FirePoint;
+    public Transform CrosshairLandMark;
     void Update()
     {
         if (Input.GetButton(FireButton))
@@ -18,6 +19,7 @@ public class PlayerAttack : MonoBehaviour
             {
                 currentWeapon = GetComponent<Pickup>().currentWeapon.GetComponent<Weapon>();
                 currentWeapon.Fire(FirePoint.forward);
+                //currentWeapon.Fire(CrosshairLandMark);
                 Destroy(currentWeapon);
                 GetComponent<Pickup>().pickupState = PickupState.Empty;
             }

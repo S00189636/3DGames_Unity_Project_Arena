@@ -255,8 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnemyTag: Player
-  Damage: 35
-  Speed: 50
+  LaunchAngle: 20
 --- !u!114 &3369601938642237808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,7 +322,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8187946355745073614}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: 573189015b6b4fe40b4018ae95c0cbb5, type: 3}
+  m_Asset: {fileID: 0}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
@@ -368,8 +367,7 @@ VFXRenderer:
   m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 0}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

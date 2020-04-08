@@ -17,4 +17,12 @@ public class Weapon : Collectable
     {
 
     }
+    public virtual void Fire(Transform target)
+    {
+
+    }
+    public virtual void Fire(Transform target, Vector3 mouseY)
+    {
+
+    }
 }
