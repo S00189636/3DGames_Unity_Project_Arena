@@ -6,9 +6,10 @@ public class Spin : MonoBehaviour
 {
 
     public float speed = 10f;
-
+    public bool spin { get; set; }
     void Update()
     {
-        transform.Rotate(Vector3.up, speed);
+        if (spin)
+            transform.Rotate(Vector3.up, speed);
     }
 }
