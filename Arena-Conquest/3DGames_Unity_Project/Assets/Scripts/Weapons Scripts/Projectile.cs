@@ -16,7 +16,10 @@ public class Projectile : MonoBehaviour
                 return transform.forward;
             else return direction;
         }
-        set { direction = value; }
+        set 
+        {
+            direction = value;
+        }
     }
     public GameObject Shooter { get; set; }
     Rigidbody body { get { return this.GetComponent<Rigidbody>(); } }
@@ -25,7 +28,9 @@ public class Projectile : MonoBehaviour
     {
         if (move)
         {
-            body.velocity = Direction * Speed;
+            body.velocity = Direction * Speed ;
+            Speed -= 0.3f * Time.deltaTime;
+            Mathf.Clamp(Speed, 0, 200);
             //Debug.Log($"i am moving with this velocity : {body.velocity}");
         }
         //Debug.Log($"not moving :(");
@@ -37,6 +42,7 @@ public class Projectile : MonoBehaviour
         if (move)
         {
             //Debug.Log($"we hit {collision.transform.name}");
+            
             move = false;
             body.freezeRotation = true;
             body.constraints = RigidbodyConstraints.FreezeAll;
@@ -44,12 +50,12 @@ public class Projectile : MonoBehaviour
             body.useGravity = false;
             body.isKinematic = true;
             //transform.position = collision.transform.position;
-            transform.parent = collision.transform;
             //Debug.Log($"{this.transform.name} - hit - {collision.transform.name}");
             if (collision.transform.tag.Contains(EnemyTag))
             {
                 collision.gameObject.GetComponent<Health>().TakeDamage(Damage);
-            }
+                transform.parent = collision.transform;
+            }else Destroy(this.gameObject, 1);
         }
     }
 

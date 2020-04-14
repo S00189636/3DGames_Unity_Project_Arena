@@ -39,14 +39,14 @@ public class MeteorAttack : MonoBehaviour
                 if (!Spin.spin)
                 {
                     Spin.spin = true;
-                    Spin.speed = 0.1f;
+                    Spin.speed = 0.2f;
                 }
                 break;
             case state.Attacking:
                 if (Spin.speed > 0)
                 {
                     Spin.spin = true;
-                    Spin.speed = -0.1f;
+                    Spin.speed = -0.2f;
                 }
                 foreach (var star in Stars)
                 {
