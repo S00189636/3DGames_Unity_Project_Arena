@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class Crosshair : MonoBehaviour
 {
     public LayerMask layerMask;
-    public GameObject LandMarker;
     public string enemyTag = "Enemy";
     public string collectableTag = "Collectable";
     public Transform CameraTransform;
@@ -38,8 +37,8 @@ public class Crosshair : MonoBehaviour
                 crosshairImage.color = normalColour;
 
             
-            LandMarker.transform.rotation = Quaternion.LookRotation(-raycastHit.normal);
-            LandMarker.transform.position = raycastHit.point + (raycastHit.normal.normalized /100 );
+            //LandMarker.transform.rotation = Quaternion.LookRotation(-raycastHit.normal);
+            //LandMarker.transform.position = raycastHit.point + (raycastHit.normal.normalized /100 );
         }
         else crosshairImage.color = normalColour;
     }

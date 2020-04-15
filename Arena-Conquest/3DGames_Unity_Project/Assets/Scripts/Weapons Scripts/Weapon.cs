@@ -4,25 +4,17 @@ using UnityEngine;
 
 public class Weapon : Collectable
 {
-    
+
     public float Damage;
-    protected Rigidbody body;
+    protected Rigidbody body { get { return GetComponent<Rigidbody>(); } }
     protected virtual void Start()
     {
         this.PickupType = PickupType.Collectable;
-        body = GetComponent<Rigidbody>();
     }
 
     public virtual void Fire(Vector3 direction)
     {
 
     }
-    public virtual void Fire(Transform target)
-    {
 
-    }
-    public virtual void Fire(Transform target, Vector3 mouseY)
-    {
-
-    }
 }

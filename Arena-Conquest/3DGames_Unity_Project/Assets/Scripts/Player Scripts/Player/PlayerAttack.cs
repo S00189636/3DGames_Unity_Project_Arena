@@ -9,7 +9,6 @@ public class PlayerAttack : MonoBehaviour
     public Weapon currentWeapon;
     public string FireButton = "Fire1";
     public Transform FirePoint;
-    public Transform CrosshairLandMark;
     void Update()
     {
         if (Input.GetButton(FireButton))

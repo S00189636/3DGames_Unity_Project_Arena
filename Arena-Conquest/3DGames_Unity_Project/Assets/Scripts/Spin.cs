@@ -6,7 +6,7 @@ public class Spin : MonoBehaviour
 {
 
     public float speed = 10f;
-    public bool spin { get; set; }
+    public bool spin;
     void Update()
     {
         if (spin)
