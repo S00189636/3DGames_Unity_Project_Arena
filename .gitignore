@@ -409,3 +409,4 @@ Arena-Conquest/3DGames_Unity_Project/Library/PackageCache/com.unity.render-pipel
 Arena-Conquest/3DGames_Unity_Project/Library/PackageCache/com.unity.render-pipelines.high-definition@7.1.8/Runtime/RenderPipeline/Raytracing/Shaders/IndirectDiffuse/RaytracingIndirectDiffuse.raytrace.meta
 Arena-Conquest/3DGames_Unity_Project/Library/PackageCache/com.unity.render-pipelines.high-definition@7.1.8/Samples~/ParticleSystemShaderSamples/Shaders/Subgraphs/ParticleFlipbookBlending.shadersubgraph.meta
 *.resS
+*.resS
