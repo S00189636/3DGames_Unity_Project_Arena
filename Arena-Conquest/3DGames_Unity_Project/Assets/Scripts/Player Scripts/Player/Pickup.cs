@@ -23,7 +23,7 @@ public class Pickup : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.E))
         {
-            // do the ray cast 
+            if (pickupState == PickupState.HasWeapon) return;
             PickUp();
         }
 

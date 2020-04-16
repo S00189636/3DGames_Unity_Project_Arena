@@ -4,10 +4,7 @@ using UnityEngine;
 
 public enum EnemyState
 {
-    Idle,
     Moving,
-    LastSpottedTracking,
-    Patrolling,
     Attacking,
     Dead
 }

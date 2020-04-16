@@ -7,7 +7,7 @@ using UnityEngine.AI;
 
 public class AINAVMovement : EnemyBase
 {
-    // Agents takes to stonend mesh
+
     public NavMeshAgent Agent;
 
     public override void Start()

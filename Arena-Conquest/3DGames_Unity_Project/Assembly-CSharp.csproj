@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\AI Scripts\EnemyBase.cs" />
     <Compile Include="Assets\Scripts\AI Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\AI Scripts\FollowTarget.cs" />
+    <Compile Include="Assets\Scripts\AI Scripts\PlutonianAttack.cs" />
     <Compile Include="Assets\Scripts\Collectable.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\Healthbar.cs" />
@@ -83,7 +84,7 @@
     <Compile Include="Assets\Scripts\SelfDestruct.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\Spin.cs" />
-    <Compile Include="Assets\Scripts\Weapons Scripts\Katana.cs" />
+    <Compile Include="Assets\Scripts\Weapons Scripts\Melee.cs" />
     <Compile Include="Assets\Scripts\Weapons Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\Weapons Scripts\Throwable.cs" />
     <Compile Include="Assets\Scripts\Weapons Scripts\Weapon.cs" />

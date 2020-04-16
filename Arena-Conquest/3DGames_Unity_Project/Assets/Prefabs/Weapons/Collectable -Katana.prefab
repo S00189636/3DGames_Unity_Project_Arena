@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2870062745821477652}
   - component: {fileID: 141850415159720980}
-  - component: {fileID: 1689555540757994992}
   - component: {fileID: 1887450714}
+  - component: {fileID: -1939253348371278836}
   m_Layer: 0
   m_Name: Collectable -Katana
   m_TagString: Collectable
@@ -48,23 +48,6 @@ CapsuleCollider:
   m_Height: 2.3
   m_Direction: 1
   m_Center: {x: 0, y: 0.1, z: 0}
---- !u!114 &1689555540757994992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2870062745821477649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35774b4797e393b4f84e91a375a8bbec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Spear
-  Damage: 15
-  ThrowPower: 110
-  PrjectailPrefab: {fileID: 2703821763015549777, guid: f102fa4915482384bae3b5205b05ad0b,
-    type: 3}
 --- !u!95 &1887450714
 Animator:
   serializedVersion: 3
@@ -84,6 +67,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-1939253348371278836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2870062745821477649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6d43304149fb9c438b702d8a55294c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Katana
+  Damage: 20
+  Durability: 5
+  WeaponType: 0
+  Range: 5
+  CenterPoint: {fileID: 0}
+  EnemyLayerMask:
+    serializedVersion: 2
+    m_Bits: 4096
+  Animator: {fileID: 1887450714}
 --- !u!114 &456936556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,7 +288,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: c98936c32cf8a0f4e8962d26b43ef89c,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -2330462131832355827, guid: c98936c32cf8a0f4e8962d26b43ef89c,
         type: 3}
