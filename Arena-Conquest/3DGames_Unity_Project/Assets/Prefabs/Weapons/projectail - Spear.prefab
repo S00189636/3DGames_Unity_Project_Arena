@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3140821910845700900}
   m_Layer: 0
   m_Name: projectail - Spear
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,6 +93,7 @@ MonoBehaviour:
   EnemyTag: Enemy
   Damage: 0
   Speed: 0
+  IgnoreTag: Player
 --- !u!54 &2793071548858287170
 Rigidbody:
   m_ObjectHideFlags: 0

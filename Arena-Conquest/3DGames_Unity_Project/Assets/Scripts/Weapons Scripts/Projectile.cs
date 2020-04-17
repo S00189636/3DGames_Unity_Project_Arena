@@ -9,7 +9,9 @@ public class Projectile : MonoBehaviour
     public string EnemyTag;
     public float Damage;
     public float Speed;
+    public string IgnoreTag;
     Vector3 direction;
+    public GameObject Effect;
     public Vector3 Direction { get 
         {
             if (direction == Vector3.zero)
@@ -39,7 +41,7 @@ public class Projectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (move)
+        if (move && collision.gameObject.tag != IgnoreTag)
         {
             //Debug.Log($"we hit {collision.transform.name}");
             
@@ -55,7 +57,13 @@ public class Projectile : MonoBehaviour
             {
                 collision.gameObject.GetComponent<Health>().TakeDamage(Damage);
                 transform.parent = collision.transform;
-            }else Destroy(this.gameObject, 1);
+
+            }
+            else
+            {
+                Destroy(this.gameObject, 1);
+                if (Effect != null) Instantiate(Effect, transform.position, Quaternion.identity, transform.parent);
+            }
         }
     }
 

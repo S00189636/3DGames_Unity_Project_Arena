@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlutonianAttack : MonoBehaviour
 {
     AINAVMovement MovementRef { get { return GetComponent<AINAVMovement>(); } }
-
+    public Animator Animator;
+    bool destroy = false;
+    public GameObject Explosion;
     private void Start()
     {
         GetComponent<Health>().OnDeath += PlutonianAttack_OnDeath;
@@ -13,7 +15,10 @@ public class PlutonianAttack : MonoBehaviour
 
     private void PlutonianAttack_OnDeath()
     {
-        MovementRef.EnemyCurrentState = EnemyState.Dead;
+        Animator.SetTrigger("Death");
+        MovementRef.StopMoving(EnemyState.Dead);
+        destroy = true;
+
     }
 
     private void Update()
@@ -28,13 +33,23 @@ public class PlutonianAttack : MonoBehaviour
 
             case EnemyState.Attacking:
                 print("Bam!! Bam!!");
+                transform.LookAt(MovementRef.PlayerPosition);
                 break;
 
             case EnemyState.Dead:
-                print("this is not the End @£$% ");
-                Destroy(this.gameObject);
+                if (destroy)
+                {
+                    
+                    print("this is not the End @£$% ");
+                    Invoke("Explode",0.3f);
+                    Destroy(this.gameObject, 0.75f);
+                    destroy = false;
+                }
                 break;
         }
     }
-
+    private void Explode()
+    {
+        Instantiate(Explosion, transform.position + (Vector3.up * (transform.localScale.y/2)), Quaternion.identity);
+    }
 }

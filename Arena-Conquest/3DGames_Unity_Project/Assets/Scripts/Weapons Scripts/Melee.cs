@@ -27,8 +27,7 @@ public class Melee : Weapon
             if (targetHealth != null)
             {
                 targetHealth.TakeDamage(Damage);
-                // play animation
-                print("Hit -" + item.transform.name);
+                //print("Hit -" + item.transform.name);
                 break;
             }
             continue;

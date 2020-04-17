@@ -15,7 +15,6 @@ public class Throwable : Weapon
         //Prjectail.GetComponent<Rigidbody>().useGravity = true;
         Prjectail.GetComponent<Projectile>().Shooter = this.gameObject;
         Prjectail.GetComponent<Projectile>().Damage = Damage;
-        Destroy(this.gameObject);
     }
 
 }

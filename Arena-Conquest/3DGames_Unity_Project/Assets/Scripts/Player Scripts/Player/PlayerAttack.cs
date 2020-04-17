@@ -23,7 +23,7 @@ public class PlayerAttack : MonoBehaviour
                 currentWeapon = GetComponent<Pickup>().currentWeapon.GetComponent<Weapon>();
                 currentWeapon.Fire(FirePoint.forward);
                 //currentWeapon.Fire(CrosshairLandMark);
-                if (currentWeapon.WeaponType == WeaponType.Throwable || hitCounter >= currentWeapon.Durability)
+                if ( hitCounter >= currentWeapon.Durability)
                 {
                     hitCounter = 0;
                     Destroy(currentWeapon.gameObject);

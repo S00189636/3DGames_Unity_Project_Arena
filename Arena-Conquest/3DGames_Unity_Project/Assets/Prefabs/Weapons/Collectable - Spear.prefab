@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9196302577409968504}
   - component: {fileID: 7573543411148236956}
   m_Layer: 0
-  m_Name: Collectable - Spear 1
+  m_Name: Collectable - Spear
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61,6 +61,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Spear
   Damage: 15
+  Durability: 3
+  WeaponType: 0
   ThrowPower: 110
   PrjectailPrefab: {fileID: 2703821763015549777, guid: f102fa4915482384bae3b5205b05ad0b,
     type: 3}

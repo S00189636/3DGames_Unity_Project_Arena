@@ -64,6 +64,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Content\Lava_Flowing_Shader\Scripts\ScrollingUVs_Layers.cs" />
+    <Compile Include="Assets\Content\Visual Effects\Dee-Shaw\Laser Pack\Scripts\Shooting.cs" />
+    <Compile Include="Assets\Content\Visual Effects\Dee-Shaw\Laser Pack\Scripts\SimpleCameraController.cs" />
+    <Compile Include="Assets\Content\Visual Effects\Fx Explosion Pack\Script\DestroyEffect.cs" />
+    <Compile Include="Assets\Content\Visual Effects\Fx Explosion Pack\Script\csDemoScenceControl.cs" />
+    <Compile Include="Assets\Content\Visual Effects\Fx Explosion Pack\Script\csLightControl.cs" />
+    <Compile Include="Assets\Content\Visual Effects\Fx Explosion Pack\Script\csMouseOrbit.cs" />
     <Compile Include="Assets\Samples\High Definition RP\7.1.8\Procedural Sky\Runtime\ProceduralSky\ProceduralSky.cs" />
     <Compile Include="Assets\Samples\High Definition RP\7.1.8\Procedural Sky\Runtime\ProceduralSky\ProceduralSkyRenderer.cs" />
     <Compile Include="Assets\Scripts\AI Scripts\AINAVMovement.cs" />
@@ -94,9 +100,11 @@
     <Compile Include="Assets\Unity-Logs-Viewer\Reporter\ReporterMessageReceiver.cs" />
     <Compile Include="Assets\Unity-Logs-Viewer\Reporter\Test\Rotate.cs" />
     <Compile Include="Assets\Unity-Logs-Viewer\Reporter\Test\TestReporter.cs" />
+    <None Include="Assets\Content\Visual Effects\Dee-Shaw\Information.txt" />
     <None Include="Assets\Content\Lava_Flowing_Shader\Shaders\Diffuse_Lava_Distort.shader" />
     <None Include="Assets\Content\Models\Models Folder.txt" />
     <None Include="Assets\Scripts\Weapons Scripts\Weapons Scripts Folder.txt" />
+    <None Include="Assets\Content\Visual Effects\Dee-Shaw\Laser Pack\Manual\Manual.txt" />
     <None Include="Assets\Scripts\AI Scripts\AI Scripst.txt" />
     <None Include="Assets\Content\Lava_Flowing_Shader\ReadMe.txt" />
     <None Include="Assets\Content\Sprites\Sprites Folder.txt" />
