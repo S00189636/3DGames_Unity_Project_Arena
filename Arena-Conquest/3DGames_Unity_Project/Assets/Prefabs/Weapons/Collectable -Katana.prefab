@@ -81,14 +81,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Katana
   Damage: 20
+  destroyAfter: 1
   Durability: 5
   WeaponType: 0
-  Range: 5
-  CenterPoint: {fileID: 0}
+  Range: 2
   EnemyLayerMask:
     serializedVersion: 2
     m_Bits: 4096
   Animator: {fileID: 1887450714}
+  Hits: 2
 --- !u!114 &456936556
 MonoBehaviour:
   m_ObjectHideFlags: 0

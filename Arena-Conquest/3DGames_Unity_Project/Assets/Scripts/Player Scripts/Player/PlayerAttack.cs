@@ -26,7 +26,7 @@ public class PlayerAttack : MonoBehaviour
                 if ( hitCounter >= currentWeapon.Durability)
                 {
                     hitCounter = 0;
-                    Destroy(currentWeapon.gameObject);
+                    Destroy(currentWeapon.gameObject, currentWeapon.destroyAfter);
                     GetComponent<Pickup>().pickupState = PickupState.Empty;
                 }
             }

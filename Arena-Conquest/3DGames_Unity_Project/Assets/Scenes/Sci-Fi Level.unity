@@ -106,15 +106,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 1.7
-    agentHeight: 4.5
-    agentSlope: 49.7
-    agentClimb: 1.5
+    agentRadius: 0.7
+    agentHeight: 2
+    agentSlope: 50
+    agentClimb: 0.7
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 1.88
     manualCellSize: 0
-    cellSize: 0.56666666
+    cellSize: 0.23333333
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -4666,7 +4666,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 1238011642}
+      objectReference: {fileID: 1396251281}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4729,47 +4729,6 @@ Transform:
   m_Father: {fileID: 328751218}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!28 &1238011642
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: 000af7bfc0f57642c047e1bf0000803f000af7bfb81e6c4200f6a8be0000803f00e17abf34626342c000acbf0000803fc02203c0703d584200e023bc0000803f8028dcbf5c8f5342007b14bf0000803f001e05bfd6a34b4200cdcc3e0000803f00cb613f7a144342005c8fbe0000803f00e1dabf08d736420048613e0000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!4 &1239011751 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7476782877244038737, guid: 167324a55b556c04c879315b0cb6af45,
@@ -4985,6 +4944,47 @@ Transform:
   m_Father: {fileID: 527177424}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!28 &1396251281
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lightning_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: 000af7bfc0f57642c047e1bf0000803f000af7bfb81e6c4200f6a8be0000803f00e17abf34626342c000acbf0000803fc02203c0703d584200e023bc0000803f8028dcbf5c8f5342007b14bf0000803f001e05bfd6a34b4200cdcc3e0000803f00cb613f7a144342005c8fbe0000803f00e1dabf08d736420048613e0000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &1397810213
 GameObject:
   m_ObjectHideFlags: 0
@@ -5567,30 +5567,6 @@ PrefabInstance:
     - target: {fileID: 650885601, guid: 36a1a725fb7b92f44890be68b90f914f, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1760821376, guid: 36a1a725fb7b92f44890be68b90f914f, type: 3}
-      propertyPath: CrosshairLandMark
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1842974931, guid: 36a1a725fb7b92f44890be68b90f914f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.5242242
-      objectReference: {fileID: 0}
-    - target: {fileID: 1842974931, guid: 36a1a725fb7b92f44890be68b90f914f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.033368696
-      objectReference: {fileID: 0}
-    - target: {fileID: 1842974931, guid: 36a1a725fb7b92f44890be68b90f914f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.020658545
-      objectReference: {fileID: 0}
-    - target: {fileID: 1842974931, guid: 36a1a725fb7b92f44890be68b90f914f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.8506755
-      objectReference: {fileID: 0}
-    - target: {fileID: 1849688079, guid: 36a1a725fb7b92f44890be68b90f914f, type: 3}
-      propertyPath: LandMarker
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5079081746151000774, guid: 36a1a725fb7b92f44890be68b90f914f,
         type: 3}

@@ -5,14 +5,14 @@ using UnityEngine;
 public class Melee : Weapon
 {
     public float Range;
-    public Transform CenterPoint;
     public LayerMask EnemyLayerMask;
     public Animator Animator;
+    public int Hits = 1;
+
 
     protected override void Start()
     {
         base.Start();
-        CenterPoint = transform.parent;
         WeaponType = WeaponType.Melee;
     }
 
@@ -20,7 +20,8 @@ public class Melee : Weapon
     {
         Animator.SetTrigger("Attack");
         Collider[] colliders = new Collider[5];
-        colliders = Physics.OverlapSphere(transform.position, Range,EnemyLayerMask);
+        colliders = Physics.OverlapSphere(transform.position, Range, EnemyLayerMask);
+        int hits = 0;
         foreach (var item in colliders)
         {
             Health targetHealth = item.transform.GetComponent<Health>();
@@ -28,25 +29,13 @@ public class Melee : Weapon
             {
                 targetHealth.TakeDamage(Damage);
                 //print("Hit -" + item.transform.name);
-                break;
+                hits++;
+                if (hits >=Hits)
+                    break;
             }
             continue;
         }
 
-
-
-        //RaycastHit hit;
-        ////if(Physics.SphereCast(CenterPoint.position,Range, direction,out hit, Range, EnemyLayerMask))
-        //if(Physics.SphereCast(transform.position,Range, direction,out hit, Range, EnemyLayerMask))
-        //{
-        //    Health targetHealth = hit.transform.GetComponent<Health>();
-        //    if(targetHealth != null)
-        //    {
-        //        targetHealth.TakeDamage(Damage);
-        //        // play animation
-        //        print("Hit -"+hit.transform.name);
-        //    }
-        //}
     }
 
 

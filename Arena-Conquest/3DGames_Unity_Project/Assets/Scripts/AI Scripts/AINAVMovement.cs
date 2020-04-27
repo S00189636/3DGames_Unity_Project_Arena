@@ -9,7 +9,14 @@ public class AINAVMovement : EnemyBase
 {
 
     public NavMeshAgent Agent;
-    public Vector3 PlayerPosition { get { return Player.transform.position; } }
+    public Vector3 PlayerPosition { 
+        get 
+        {
+            Vector3 playerPosition = Player.transform.position;
+            playerPosition.y += 0.5f;
+            return playerPosition; 
+        }
+    }
     public override void Start()
     {
         base.Start();

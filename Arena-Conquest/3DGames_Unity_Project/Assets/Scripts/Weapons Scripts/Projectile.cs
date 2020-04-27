@@ -12,6 +12,8 @@ public class Projectile : MonoBehaviour
     public string IgnoreTag;
     Vector3 direction;
     public GameObject Effect;
+    public bool DestroyOnImpact = false;
+    public float DestroyAfter = 1;
     public Vector3 Direction { get 
         {
             if (direction == Vector3.zero)
@@ -46,6 +48,7 @@ public class Projectile : MonoBehaviour
             //Debug.Log($"we hit {collision.transform.name}");
             
             move = false;
+            GetComponent<Collider>().isTrigger = true;
             body.freezeRotation = true;
             body.constraints = RigidbodyConstraints.FreezeAll;
             body.velocity = Vector3.zero;
@@ -61,10 +64,16 @@ public class Projectile : MonoBehaviour
             }
             else
             {
-                Destroy(this.gameObject, 1);
                 if (Effect != null) Instantiate(Effect, transform.position, Quaternion.identity, transform.parent);
             }
+            Destroy();
         }
+    }
+
+    private void Destroy()
+    {
+        if (DestroyOnImpact) Destroy(this.gameObject);
+        else Destroy(this.gameObject, DestroyAfter);
     }
 
 }

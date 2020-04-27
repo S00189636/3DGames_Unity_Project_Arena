@@ -259,6 +259,8 @@ MonoBehaviour:
   Speed: 0
   IgnoreTag: 
   Effect: {fileID: 100012, guid: 1f1aa87040db08846a4332981b0a6fa7, type: 3}
+  DestroyOnImpact: 1
+  DestroyAfter: 1
 --- !u!114 &3369601938642237808
 MonoBehaviour:
   m_ObjectHideFlags: 0

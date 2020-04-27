@@ -12,6 +12,7 @@ public class Weapon : Collectable
 {
 
     public float Damage;
+    public float destroyAfter;
     protected Rigidbody body { get { return GetComponent<Rigidbody>(); } }
 
     public int Durability = 1;

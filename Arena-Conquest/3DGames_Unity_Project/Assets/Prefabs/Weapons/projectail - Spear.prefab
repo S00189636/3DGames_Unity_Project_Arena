@@ -94,6 +94,9 @@ MonoBehaviour:
   Damage: 0
   Speed: 0
   IgnoreTag: Player
+  Effect: {fileID: 0}
+  DestroyOnImpact: 0
+  DestroyAfter: 2
 --- !u!54 &2793071548858287170
 Rigidbody:
   m_ObjectHideFlags: 0
