@@ -12,9 +12,8 @@ public class AINAVMovement : EnemyBase
     public Vector3 PlayerPosition { 
         get 
         {
-            if (Player == null ) return Vector3.zero;
-            Vector3 playerPosition = Player.transform.position;
-            playerPosition.y += 0.5f;
+            if (Target == null ) return Vector3.zero;
+            Vector3 playerPosition = Target.transform.position;
             return playerPosition; 
         }
     }

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public enum EnemyState
 {
@@ -11,31 +9,23 @@ public enum EnemyState
 
 public class EnemyBase : MonoBehaviour
 {
-    public float AttackDistance;
-    public EnemyState EnemyCurrentState;
-    public string TargetTag = "Player";
-    public  GameObject Player;
-    public Transform CenterPoint;
-
-    //Layers
-    public LayerMask TargetMask;
-
-     // Position
-    public Vector3 CurrentPosition;
-
-    // Tracking
     public float FieldOfView = 45;
     public float VisionDistance = 50;
-    public bool TargetInFOV = false;
-    public Vector3 TargetLastSpotted;
-    public float TrackingTimer = 5;
-    public float TimeToPatrol;
-
-    
-    
+    public float AttackDistance;
+    public string TargetTag = "Player";
+    public LayerMask TargetMask;
+    public Transform CenterPoint;
+    public EnemyState EnemyCurrentState 
+    { 
+        get {return _EnemyCurrentState; }  
+        set { _EnemyCurrentState = value; } 
+    }
+    protected  GameObject Target;
+    protected EnemyState _EnemyCurrentState;
+    protected bool TargetInFOV = false;
     public virtual void Start()
     {
-        Player = GameObject.FindGameObjectWithTag(TargetTag);
+        Target = GameObject.FindGameObjectWithTag(TargetTag);
 
     }
 
@@ -87,7 +77,7 @@ public class EnemyBase : MonoBehaviour
         if (TargetInFOV)
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawRay(CenterPoint.position, ((Player.transform.position + Vector3.up) - CenterPoint.position).normalized * VisionDistance);
+            Gizmos.DrawRay(CenterPoint.position, ((Target.transform.position + Vector3.up) - CenterPoint.position).normalized * VisionDistance);
         }
         
 

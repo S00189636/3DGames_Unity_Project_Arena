@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraLook : MonoBehaviour
 {
-    
+
     public float horizontalSpeed;
     public float verticalSpeed;
     public Camera lookCamera;
@@ -12,7 +12,7 @@ public class CameraLook : MonoBehaviour
     private float upRotation;
     public float maxLookDownAngle = 40;
     public float maxLookUpAngle = 25;
-
+    public Crosshair Crosshair;
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -35,7 +35,10 @@ public class CameraLook : MonoBehaviour
         upRotation = Mathf.Clamp(upRotation, -maxLookDownAngle, maxLookUpAngle);
 
         lookCamera.transform.localRotation = Quaternion.Euler(upRotation, 0, 0);
-        Quaternion newHandRotation = Quaternion.Euler(upRotationHand + 90, ( lookCamera.transform.localPosition.y - hand.transform.localRotation.y )*1.5f, hand.transform.localRotation.z);
+        Quaternion newHandRotation;
+        newHandRotation = Quaternion.Euler(upRotationHand + 90,
+            (Crosshair.raycastHit.point.y - hand.transform.localRotation.y)
+            , Crosshair.raycastHit.point.normalized.z - hand.transform.localRotation.z);
         hand.transform.localRotation = newHandRotation;
         transform.Rotate(Vector3.up * mouseX);
 

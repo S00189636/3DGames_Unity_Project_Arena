@@ -27,5 +27,9 @@ public class Weapon : Collectable
     {
 
     }
+    public virtual void Fire(Vector3 direction ,Quaternion rotation)
+    {
+        Fire(direction);
+    }
 
 }

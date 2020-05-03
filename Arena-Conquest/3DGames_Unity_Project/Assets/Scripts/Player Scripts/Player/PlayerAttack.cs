@@ -12,6 +12,8 @@ public class PlayerAttack : MonoBehaviour
     public string FireButton = "Fire1";
     public Transform FirePoint;
     private int hitCounter = 0;
+    public Crosshair Crosshair;
+    private Vector3 hitPos { get { return Crosshair.raycastHit.point; } }
     void Update()
     {
         if (Input.GetButtonUp(FireButton))
@@ -21,7 +23,9 @@ public class PlayerAttack : MonoBehaviour
             {
                 hitCounter++;
                 currentWeapon = GetComponent<Pickup>().currentWeapon.GetComponent<Weapon>();
-                currentWeapon.Fire(FirePoint.forward);
+                Vector3 hitpos = this.hitPos == Vector3.zero ? FirePoint.up : (hitPos - FirePoint.position).normalized;
+                print($"PlayerAttack: hit pos: {hitpos}");
+                currentWeapon.Fire(hitpos, FirePoint.rotation);
                 //currentWeapon.Fire(CrosshairLandMark);
                 if ( hitCounter >= currentWeapon.Durability)
                 {

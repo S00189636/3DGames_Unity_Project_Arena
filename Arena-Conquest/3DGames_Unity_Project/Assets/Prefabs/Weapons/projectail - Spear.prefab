@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2606921709228852556}
   - component: {fileID: -7584806455400307873}
   - component: {fileID: 3140821910845700900}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: projectail - Spear
   m_TagString: Collectable
   m_Icon: {fileID: 0}
@@ -93,8 +93,10 @@ MonoBehaviour:
   EnemyTag: Enemy
   Damage: 0
   Speed: 0
-  IgnoreTag: Player,Collectable
-  Effect: {fileID: 0}
+  IgnoreLayer:
+    serializedVersion: 2
+    m_Bits: 25600
+  EffectImpact: {fileID: 0}
   DestroyOnImpact: 0
   DestroyAfter: 2
 --- !u!54 &2793071548858287170
@@ -213,6 +215,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spear01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 5b68d4dfebfdf4a40a52a6aac41e8ad2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b68d4dfebfdf4a40a52a6aac41e8ad2, type: 3}

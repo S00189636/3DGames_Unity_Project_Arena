@@ -278,7 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f114734d3a974b4ba20f69c0b0a09bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FullHealth: 30
+  FullHealth: 23
 --- !u!195 &4470656581005150772
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -313,21 +313,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7d5e84c5015a1a438109b9ecaf8f7b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FieldOfView: 95
+  VisionDistance: 50
   AttackDistance: 10
-  EnemyCurrentState: 0
   TargetTag: Player
-  Player: {fileID: 0}
-  CenterPoint: {fileID: 4470656581450203442}
   TargetMask:
     serializedVersion: 2
     m_Bits: 1024
-  CurrentPosition: {x: 0, y: 0, z: 0}
-  FieldOfView: 95
-  VisionDistance: 50
-  TargetInFOV: 0
-  TargetLastSpotted: {x: 0, y: 0, z: 0}
-  TrackingTimer: 5
-  TimeToPatrol: 0
+  CenterPoint: {fileID: 4470656581450203442}
   Agent: {fileID: 0}
 --- !u!114 &1520859399
 MonoBehaviour:
@@ -346,9 +339,9 @@ MonoBehaviour:
   PrjectailPrefab: {fileID: 2344323551641304299, guid: bf7470af8b014a345998035b2a550852,
     type: 3}
   Animator: {fileID: 6689296626672952621}
-  fireRate: 1.5
+  fireRate: 2.5
   Explosion: {fileID: 100004, guid: bd5a7ae3e8bd4c8499f69e8e45138021, type: 3}
-  Damage: 10
+  Damage: 15
 --- !u!136 &1179630254
 CapsuleCollider:
   m_ObjectHideFlags: 0

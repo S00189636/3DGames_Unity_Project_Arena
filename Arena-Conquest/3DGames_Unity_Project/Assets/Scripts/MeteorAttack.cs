@@ -86,10 +86,8 @@ public class MeteorAttack : MonoBehaviour
     private void ShootOne()
     {
         GameObject projectile = Instantiate(MeteorPrefab, transform.position, transform.rotation);
-        projectile.transform.LookAt(Player.transform.position + Vector3.up);
-        //projectile.GetComponent<Projectile>().velocity = projectile.transform.forward;
+        projectile.GetComponent<Projectile>().Direction =  Player.transform.position - transform.position ;
         projectile.GetComponent<Rigidbody>().useGravity = false;
-        projectile.GetComponent<Projectile>().Shooter = this.gameObject;
         projectile.GetComponent<Projectile>().Damage = Damage;
         projectile.GetComponent<Projectile>().Speed = MeteorSpeed;
         counter++;

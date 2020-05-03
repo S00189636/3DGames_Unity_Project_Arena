@@ -12,11 +12,11 @@ public class FollowTarget : AINAVMovement
         switch (EnemyCurrentState)
         {
             case EnemyState.Moving:
-                if(Agent.destination != Player.transform.position)
+                if(Agent.destination != Target.transform.position)
                 {
-                    Move(Player.transform.position);
+                    Move(Target.transform.position);
 
-                    float Distance = Vector3.Distance(transform.position, Player.transform.position);
+                    float Distance = Vector3.Distance(transform.position, Target.transform.position);
                     if (Distance <= AttackDistance)
                     {
                         StopMoving(EnemyState.Attacking);
@@ -24,11 +24,11 @@ public class FollowTarget : AINAVMovement
                 }
                 break;
             case EnemyState.Attacking:
-                float CurrentDistance = Vector3.Distance(transform.position, Player.transform.position);
+                float CurrentDistance = Vector3.Distance(transform.position, Target.transform.position);
                 if (CurrentDistance > AttackDistance) //(CurrentDistance < VisionDistance )
                 {
                     Agent.isStopped = false;
-                    Move(Player.transform.position);
+                    Move(Target.transform.position);
                 }
                 break;
             case EnemyState.Dead:

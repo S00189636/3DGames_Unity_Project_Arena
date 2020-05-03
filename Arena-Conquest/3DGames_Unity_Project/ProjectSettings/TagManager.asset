@@ -21,8 +21,8 @@ TagManager:
   - Player
   - GroundPlatform
   - Enemy
-  - 
-  - 
+  - Collectable
+  - Projectiles
   - 
   - 
   - 

@@ -18,6 +18,7 @@ public class Melee : Weapon
 
     public override void Fire(Vector3 direction)
     {
+        
         Animator.SetTrigger("Attack");
         Collider[] colliders = new Collider[5];
         colliders = Physics.OverlapSphere(transform.position, Range, EnemyLayerMask);

@@ -27,6 +27,7 @@ public class PlutonianAttack : MonoBehaviour
 
     private void PlutonianAttack_OnDeath()
     {
+        if (MovementRef.EnemyCurrentState == EnemyState.Dead) return;
         Animator.SetTrigger("Death");
         MovementRef.StopMoving(EnemyState.Dead);
         destroy = true;
@@ -43,11 +44,17 @@ public class PlutonianAttack : MonoBehaviour
                 break;
 
             case EnemyState.Attacking:
-                print("Bam!! Bam!!");
+                //print("Bam!! Bam!!");
                 Shoot();
-                transform.LookAt(MovementRef.PlayerPosition);
+                Quaternion lookRotation = Quaternion.LookRotation(MovementRef.PlayerPosition - transform.position);
+                lookRotation.x = transform.rotation.x;
+                lookRotation.z = transform.rotation.z;
+                transform.rotation = lookRotation;
+                //transform.LookAt(new Vector3(transform.rotation.x,
+                //    Mathf.Clamp(MovementRef.PlayerPosition.y,-25,20)
+                //    ));
+                //MovementRef.PlayerPosition.y));
                 break;
-
             case EnemyState.Dead:
                 if (destroy)
                 {
@@ -71,8 +78,6 @@ public class PlutonianAttack : MonoBehaviour
         Vector3 direction = MovementRef.PlayerPosition - CenterPoint.position;
         GameObject Prjectail = Instantiate(PrjectailPrefab, CenterPoint.position, CenterPoint.rotation);
         Prjectail.GetComponent<Projectile>().Direction = direction;
-        //Prjectail.GetComponent<Rigidbody>().useGravity = true;
-        Prjectail.GetComponent<Projectile>().Shooter = this.gameObject;
         Prjectail.GetComponent<Projectile>().Damage = Damage;
         timeTofire = Time.time + fireRate;
     }
