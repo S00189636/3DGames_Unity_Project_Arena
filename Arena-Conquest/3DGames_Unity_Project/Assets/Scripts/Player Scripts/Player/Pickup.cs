@@ -52,6 +52,7 @@ public class Pickup : MonoBehaviour
             {
                 //if (pickupState == PickupState.HasWeapon) return;
                 GameObject pickedUp = Instantiate(item.transform.gameObject, hand.transform.position, hand.transform.rotation, hand.transform);
+                pickedUp.GetComponent<Collider>().enabled = false;
                 if (currentWeapon != null)
                     Destroy(currentWeapon.gameObject);
                 currentWeapon = pickedUp;

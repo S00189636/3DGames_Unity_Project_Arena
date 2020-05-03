@@ -43,7 +43,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2703821763015549777}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.21483026
   m_Height: 0.5957036
@@ -93,7 +93,7 @@ MonoBehaviour:
   EnemyTag: Enemy
   Damage: 0
   Speed: 0
-  IgnoreTag: Player
+  IgnoreTag: Player,Collectable
   Effect: {fileID: 0}
   DestroyOnImpact: 0
   DestroyAfter: 2
@@ -121,8 +121,8 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4427880889564323118}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_IsTrigger: 1
+  m_Enabled: 0
   m_Radius: 0.023273794
   m_Height: 0.24166624
   m_Direction: 1

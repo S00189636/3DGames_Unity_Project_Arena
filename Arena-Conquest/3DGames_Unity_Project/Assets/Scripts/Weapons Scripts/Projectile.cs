@@ -41,21 +41,22 @@ public class Projectile : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
-        if (move && collision.gameObject.tag != IgnoreTag)
+        if (move && !collision.gameObject.tag.Contains(IgnoreTag))
         {
             //Debug.Log($"we hit {collision.transform.name}");
-            
+
             move = false;
-            GetComponent<Collider>().isTrigger = true;
             body.freezeRotation = true;
             body.constraints = RigidbodyConstraints.FreezeAll;
             body.velocity = Vector3.zero;
             body.useGravity = false;
             body.isKinematic = true;
+
             //transform.position = collision.transform.position;
-            //Debug.Log($"{this.transform.name} - hit - {collision.transform.name}");
+            Debug.Log($"{this.transform.name} - hit - {collision.transform.name}");
+
             if (collision.transform.tag.Contains(EnemyTag))
             {
                 collision.gameObject.GetComponent<Health>().TakeDamage(Damage);
@@ -69,6 +70,37 @@ public class Projectile : MonoBehaviour
             Destroy();
         }
     }
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (move && collision.gameObject.tag != IgnoreTag)
+    //    {
+    //        //Debug.Log($"we hit {collision.transform.name}");
+
+    //        move = false;
+    //        GetComponent<Collider>().isTrigger = true;
+    //        body.freezeRotation = true;
+    //        body.constraints = RigidbodyConstraints.FreezeAll;
+    //        body.velocity = Vector3.zero;
+    //        body.useGravity = false;
+    //        body.isKinematic = true;
+
+    //        //transform.position = collision.transform.position;
+    //        //Debug.Log($"{this.transform.name} - hit - {collision.transform.name}");
+
+    //        if (collision.transform.tag.Contains(EnemyTag))
+    //        {
+    //            collision.gameObject.GetComponent<Health>().TakeDamage(Damage);
+    //            transform.parent = collision.transform;
+
+    //        }
+    //        else
+    //        {
+    //            if (Effect != null) Instantiate(Effect, transform.position, Quaternion.identity, transform.parent);
+    //        }
+    //        Destroy();
+    //    }
+    //}
 
     private void Destroy()
     {

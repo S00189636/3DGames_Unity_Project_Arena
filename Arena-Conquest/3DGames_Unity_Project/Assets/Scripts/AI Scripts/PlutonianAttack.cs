@@ -79,9 +79,9 @@ public class PlutonianAttack : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (CenterPoint == null || MovementRef == null) return;
+        if (CenterPoint == null ) return;
         Gizmos.color = Color.green;
-        Gizmos.DrawLine(CenterPoint.position, (MovementRef.PlayerPosition - CenterPoint.position) * MovementRef.AttackDistance);
+        Gizmos.DrawLine(CenterPoint.position, (MovementRef.PlayerPosition));
     }
 
     private void OnDestroy()
