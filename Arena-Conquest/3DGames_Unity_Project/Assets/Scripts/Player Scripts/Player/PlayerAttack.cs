@@ -13,7 +13,7 @@ public class PlayerAttack : MonoBehaviour
     public Transform FirePoint;
     private int hitCounter = 0;
     public Crosshair Crosshair;
-    private Vector3 hitPos { get { return Crosshair.raycastHit.point; } }
+    private Vector3 hitPos { get { return Crosshair.raycastHit.point == Vector3.zero ? FirePoint.up : (Crosshair.raycastHit.point - FirePoint.position).normalized; } }
     void Update()
     {
         if (Input.GetButtonUp(FireButton))
@@ -23,9 +23,8 @@ public class PlayerAttack : MonoBehaviour
             {
                 hitCounter++;
                 currentWeapon = GetComponent<Pickup>().currentWeapon.GetComponent<Weapon>();
-                Vector3 hitpos = this.hitPos == Vector3.zero ? FirePoint.up : (hitPos - FirePoint.position).normalized;
-                print($"PlayerAttack: hit pos: {hitpos}");
-                currentWeapon.Fire(hitpos, FirePoint.rotation);
+                //print($"PlayerAttack: hit pos: {hitpos}");
+                currentWeapon.Fire(hitPos, FirePoint.rotation);
                 //currentWeapon.Fire(CrosshairLandMark);
                 if ( hitCounter >= currentWeapon.Durability)
                 {

@@ -76,13 +76,13 @@
     <Compile Include="Assets\Scripts\AI Scripts\EnemyBase.cs" />
     <Compile Include="Assets\Scripts\AI Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\AI Scripts\FollowTarget.cs" />
+    <Compile Include="Assets\Scripts\AI Scripts\MainBoss.cs" />
     <Compile Include="Assets\Scripts\AI Scripts\PlutonianAttack.cs" />
     <Compile Include="Assets\Scripts\Collectable.cs" />
     <Compile Include="Assets\Scripts\ExplosionDamage.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\Healthbar.cs" />
     <Compile Include="Assets\Scripts\LookAtCamera.cs" />
-    <Compile Include="Assets\Scripts\MainBoss.cs" />
     <Compile Include="Assets\Scripts\MeteorAttack.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Player\CameraLook.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Player\Crosshair.cs" />

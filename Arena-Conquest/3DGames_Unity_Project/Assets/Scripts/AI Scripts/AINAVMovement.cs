@@ -12,7 +12,7 @@ public class AINAVMovement : EnemyBase
     public Vector3 PlayerPosition { 
         get 
         {
-            if (Target == null ) return Vector3.zero;
+            if (Target == null ) return transform.position;
             Vector3 playerPosition = Target.transform.position;
             return playerPosition; 
         }
@@ -26,19 +26,19 @@ public class AINAVMovement : EnemyBase
     public void Move(Vector3 _destination)
     {
         Agent.SetDestination(_destination);
-        EnemyCurrentState = EnemyState.Moving;
+        _EnemyCurrentState = EnemyState.Moving;
     }
 
     public void StopMoving(EnemyState _enemState)
     {
         Agent.isStopped = true;
-        EnemyCurrentState = _enemState;
+        _EnemyCurrentState = _enemState;
     }
 
     public void ResumeMoving()
     {
         Agent.isStopped = false;
-        EnemyCurrentState = EnemyState.Moving;
+        _EnemyCurrentState = EnemyState.Moving;
     }
     
     

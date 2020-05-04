@@ -32,9 +32,8 @@ public class Pickup : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.blue;
         Gizmos.DrawRay(castStartPosition.position, (this.transform.forward /*- new Vector3(xOffSet, 0, 0)*/) * castDistance);
-
         Gizmos.DrawWireSphere(castStartPosition.position, castDistance);
 
     }

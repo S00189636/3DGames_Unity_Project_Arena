@@ -250,13 +250,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39765321}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!28 &44547970
+--- !u!1 &42399596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 42399597}
+  - component: {fileID: 42399598}
+  m_Layer: 0
+  m_Name: BossLink
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &42399597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42399596}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -160.774, y: 126.179276, z: -17.624062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1370270848}
+  - {fileID: 1887777167}
+  m_Father: {fileID: 527177424}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!191 &42399598
+OffMeshLink:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42399596}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_AreaIndex: 0
+  m_AgentTypeID: 0
+  m_Start: {fileID: 1370270848}
+  m_End: {fileID: 1887777167}
+  m_CostOverride: 1
+  m_BiDirectional: 1
+  m_Activated: 1
+  m_AutoUpdatePositions: 0
+--- !u!28 &61732528
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (3)_PositionMap
+  m_Name: Lightning (17)_PositionMap
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -286,48 +336,7 @@ Texture2D:
   m_LightmapFormat: 0
   m_ColorSpace: 0
   image data: 128
-  _typelessdata: 9c99d9c2c0f5764240f66f400000803f9c99d9c2b81e6c42b0bda5400000803f34b3d7c234626342e04c85400000803f88d6d9c2703d584220fbaf400000803f182ed9c25c8f5342b0bd9d400000803fb0c7d6c2d6a34b42d019bd400000803fdcf9d3c27a1443424857a7400000803ff828d9c208d736424857b7400000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
---- !u!28 &49402188
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (12)_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: 9c999bc27814cb42fd9850420000803f9c999bc2f4a8c5424f5156420000803f36b399c2b24ac142354352420000803f8ad69bc250b8bb42fd9857420000803f162e9bc24661b9424f5155420000803fb0c798c2846bb542d43c59420000803fdef995c2d423b142828456420000803ff8289bc21c05ab42828458420000803f
+  _typelessdata: 9c999bc27814cb420cf316430000803f9c999bc2f4a8c542206118430000803f36b399c2b24ac1429a5d17430000803f8ad69bc250b8bb420cb318430000803f162e9bc24661b942202118430000803fb0c798c2846bb542021c19430000803fdef995c2d423b142ee6d18430000803ff8289bc21c05ab42eeed18430000803f
   m_StreamData:
     offset: 0
     size: 0
@@ -452,7 +461,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -502,7 +511,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -523,7 +532,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 1091611708}
+      objectReference: {fileID: 207592778}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -533,6 +542,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
@@ -634,6 +648,47 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2501866860643583356}
   m_PrefabAsset: {fileID: 0}
+--- !u!28 &207592778
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lightning (1)_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: 000af7bfc0f57642b5e6adc20000803f000af7bfb81e6c428b0aabc20000803f00e17abf346263429911adc20000803fc02203c0703d5842b566aac20000803f8028dcbf5c8f53428b8aabc20000803f001e05bfd6a34b42c994a9c20000803f00cb613f7a144342f3f0aac20000803f00e1dabf08d73642f3f0a9c20000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!4 &225695017 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
@@ -857,47 +912,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1200724284}
   m_PrefabAsset: {fileID: 0}
---- !u!28 &272900560
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (6)_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: feff134268f6ae4164ff0c420000803ffeff134254489941b6b712420000803fcacc17424ccf87419ca90e420000803f22861342880b634164ff13420000803f08d7144230535041b6b711420000803fd6a3194220a530413aa315420000803f7a3f1f42b0670e41e9ea12420000803f46e11442e0e3ba40e8ea14420000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &281636939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1224,7 +1238,7 @@ PrefabInstance:
     - target: {fileID: 7476782877244038737, guid: 167324a55b556c04c879315b0cb6af45,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7476782877244038737, guid: 167324a55b556c04c879315b0cb6af45,
         type: 3}
@@ -1263,7 +1277,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -1313,7 +1327,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -1334,7 +1348,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 375535657}
+      objectReference: {fileID: 1042210618}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1350,49 +1364,13 @@ PrefabInstance:
       propertyPath: m_RendererPriority
       value: 116
       objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
---- !u!28 &325900352
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (8)_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: 3833e3c168f6ae41d49a93c10000803f3833e3c154489941302a88c10000803fa099dbc14ccf8741644690c10000803ff026e4c1880b6341d49a85c10000803f2085e1c130535041302a8ac10000803f88ebd7c120a53041245382c10000803f40b4ccc1b0670e41c8c387c10000803fa870e1c1e0e3ba40c8c383c10000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &328751217
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,47 +1413,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1500862355}
   m_PrefabAsset: {fileID: 0}
---- !u!28 &347002451
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (17)_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: 9c999bc27814cb420cf316430000803f9c999bc2f4a8c542206118430000803f36b399c2b24ac1429a5d17430000803f8ad69bc250b8bb420cb318430000803f162e9bc24661b942202118430000803fb0c798c2846bb542021c19430000803fdef995c2d423b142ee6d18430000803ff8289bc21c05ab42eeed18430000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &365229125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1532,7 +1469,7 @@ PrefabInstance:
     - target: {fileID: 2836787463724499759, guid: c20cdac538e37834b805c3cb131f5362,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2880435920380890352, guid: c20cdac538e37834b805c3cb131f5362,
         type: 3}
@@ -1552,7 +1489,7 @@ PrefabInstance:
     - target: {fileID: 2880435920380890352, guid: c20cdac538e37834b805c3cb131f5362,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2880435920380890353, guid: c20cdac538e37834b805c3cb131f5362,
         type: 3}
@@ -1634,7 +1571,7 @@ PrefabInstance:
     - target: {fileID: 6812640206571791327, guid: c20cdac538e37834b805c3cb131f5362,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7666609510743030863, guid: c20cdac538e37834b805c3cb131f5362,
         type: 3}
@@ -1809,7 +1746,7 @@ PrefabInstance:
     - target: {fileID: 7666609511615998932, guid: c20cdac538e37834b805c3cb131f5362,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7666609511615998934, guid: c20cdac538e37834b805c3cb131f5362,
         type: 3}
@@ -2041,7 +1978,7 @@ PrefabInstance:
     - target: {fileID: 9037303303666716291, guid: c20cdac538e37834b805c3cb131f5362,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c20cdac538e37834b805c3cb131f5362, type: 3}
@@ -2075,47 +2012,6 @@ Transform:
   m_Father: {fileID: 1203010153}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!28 &375535657
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (10)_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: 648fe8417814cb42d0331ac20000803f648fe841f4a8c5427e7b14c20000803ffc28f041b24ac142988918c20000803fac9be74150b8bb42d03313c20000803f783dea414661b9427e7b15c20000803f14d7f341846bb542f88f11c20000803f5c0eff41d423b1424a4814c20000803ff451ea411c05ab424a4812c20000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &383552785
 GameObject:
   m_ObjectHideFlags: 0
@@ -2321,6 +2217,20 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1953350796}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &394787913
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394787912}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2540817853737639666, guid: 410929dc12a461a45875da53c616c1d2, type: 3}
 --- !u!114 &394787915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2410,7 +2320,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
@@ -2485,7 +2395,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -2535,7 +2445,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -2556,7 +2466,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 715761111}
+      objectReference: {fileID: 1063052346}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2572,8 +2482,54 @@ PrefabInstance:
       propertyPath: m_RendererPriority
       value: 116
       objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
+--- !u!28 &460603654
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lightning_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: 000af7bfc0f57642c047e1bf0000803f000af7bfb81e6c4200f6a8be0000803f00e17abf34626342c000acbf0000803fc02203c0703d584200e023bc0000803f8028dcbf5c8f5342007b14bf0000803f001e05bfd6a34b4200cdcc3e0000803f00cb613f7a144342005c8fbe0000803f00e1dabf08d736420048613e0000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &475042922
 GameObject:
   m_ObjectHideFlags: 0
@@ -2635,7 +2591,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -2685,7 +2641,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -2706,7 +2662,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 568641003}
+      objectReference: {fileID: 487986667}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2717,8 +2673,54 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
+--- !u!28 &487986667
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lightning (9)_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: 6066d64168f6ae41d49a93c10000803f6066d64154489941302a88c10000803ff8ffdd414ccf8741644690c10000803fa872d541880b6341d49a85c10000803f7814d84130535041302a8ac10000803f10aee14120a53041245382c10000803f58e5ec41b0670e41c8c387c10000803ff028d841e0e3ba40c8c383c10000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &492206950
 GameObject:
   m_ObjectHideFlags: 0
@@ -2730,12 +2732,12 @@ GameObject:
   - component: {fileID: 492206951}
   - component: {fileID: 492206953}
   - component: {fileID: 492206952}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Visual Effect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &492206951
 Transform:
@@ -2875,29 +2877,13 @@ Transform:
   m_Children:
   - {fileID: 1339035898}
   - {fileID: 111891966}
+  - {fileID: 1953350797}
+  - {fileID: 42399597}
   - {fileID: 912503246}
-  - {fileID: 252421456}
+  - {fileID: 1661065191}
   - {fileID: 478719764}
-  - {fileID: 675625117}
-  - {fileID: 2021210143}
-  - {fileID: 225695017}
-  - {fileID: 1331452837}
-  - {fileID: 248616462}
-  - {fileID: 1793152832}
-  - {fileID: 1107649880}
-  - {fileID: 335383588}
-  - {fileID: 1781831697}
-  - {fileID: 994236343}
-  - {fileID: 2023027579}
-  - {fileID: 297842939}
-  - {fileID: 25545034}
-  - {fileID: 1087252668}
-  - {fileID: 647649986}
-  - {fileID: 762795286}
-  - {fileID: 302911410}
-  - {fileID: 2065141994}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &529744110
 GameObject:
@@ -3000,7 +2986,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
@@ -3044,53 +3030,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 410929dc12a461a45875da53c616c1d2, type: 3}
---- !u!28 &568641003
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (9)_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: 6066d64168f6ae41d49a93c10000803f6066d64154489941302a88c10000803ff8ffdd414ccf8741644690c10000803fa872d541880b6341d49a85c10000803f7814d84130535041302a8ac10000803f10aee14120a53041245382c10000803f58e5ec41b0670e41c8c387c10000803ff028d841e0e3ba40c8c383c10000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &590931254
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -3140,7 +3085,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -3161,7 +3106,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 1668040056}
+      objectReference: {fileID: 767853313}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3177,6 +3122,11 @@ PrefabInstance:
       propertyPath: m_RendererPriority
       value: 116
       objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
 --- !u!1001 &594524599
@@ -3184,7 +3134,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -3209,7 +3159,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 23.6
+      value: 23.599998
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -3234,7 +3184,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -3255,7 +3205,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 1935318758}
+      objectReference: {fileID: 1650109625}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3270,6 +3220,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RendererPriority
       value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
@@ -3713,7 +3668,7 @@ PrefabInstance:
     - target: {fileID: 7666609511615998934, guid: c20cdac538e37834b805c3cb131f5362,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7666609511615998934, guid: c20cdac538e37834b805c3cb131f5362,
         type: 3}
@@ -4183,7 +4138,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &659767586 stripped
 Transform:
@@ -4202,7 +4157,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -4252,7 +4207,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -4273,7 +4228,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 1629498631}
+      objectReference: {fileID: 1270085114}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4289,55 +4244,19 @@ PrefabInstance:
       propertyPath: m_RendererPriority
       value: 116
       objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
---- !u!28 &715761111
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (15)_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: 8066264064ae76426098ef410000803f806626405cd76b420409fb410000803f40336340d81a6342d0ecf2410000803fc0c81e4014f657426098fd410000803f40d73340004853420409f9410000803f005280407a5c4b42077000420000803f202fad401ecd42426a6ffb410000803f007b3440ac8f36426a6fff410000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &728982462
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -4362,7 +4281,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.8999996
+      value: -7.9000015
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -4387,7 +4306,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -4408,7 +4327,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 49402188}
+      objectReference: {fileID: 962180600}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4423,6 +4342,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RendererPriority
       value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
@@ -4545,12 +4469,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 770697411}
   m_PrefabAsset: {fileID: 0}
+--- !u!28 &767853313
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lightning (13)_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: cdccd3427814cb420cf316430000803fcdccd342f4a8c542206118430000803f34b3d542b24ac1429a5d17430000803fe08fd34250b8bb420cb318430000803f5238d4424661b942202118430000803fb89ed642846bb542021c19430000803f8c6cd942d423b142ee6d18430000803f713dd4421c05ab42eeed18430000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1001 &770697411
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -4575,7 +4540,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 23.6
+      value: 23.599998
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -4600,7 +4565,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -4621,7 +4586,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 857120183}
+      objectReference: {fileID: 1000462353}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4636,6 +4601,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RendererPriority
       value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
@@ -4890,24 +4860,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796241740}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &812432136 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5369653130698587526, guid: 0c5eba49610f8eb41931507e33b83043,
+--- !u!4 &812432141 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8998067580653309845, guid: 0c5eba49610f8eb41931507e33b83043,
     type: 3}
   m_PrefabInstance: {fileID: 2331201433945431638}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &812432137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812432136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14706728616558b4d9810dd99b6bdae3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &830834636
 GameObject:
   m_ObjectHideFlags: 1
@@ -4953,14 +4911,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &832540554
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -5010,7 +4968,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -5031,7 +4989,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 835670219}
+      objectReference: {fileID: 1752753697}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5042,49 +5000,13 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
---- !u!28 &835670219
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (7)_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: 3833e3c168f6ae4164ff0c420000803f3833e3c154489941b6b712420000803fa099dbc14ccf87419ca90e420000803ff026e4c1880b634164ff13420000803f2085e1c130535041b6b711420000803f88ebd7c120a530413aa315420000803f40b4ccc1b0670e41e9ea12420000803fa870e1c1e0e3ba40e8ea14420000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &848165254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5150,7 +5072,7 @@ PrefabInstance:
     - target: {fileID: 7476782877244038737, guid: 167324a55b556c04c879315b0cb6af45,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7476782877244038737, guid: 167324a55b556c04c879315b0cb6af45,
         type: 3}
@@ -5254,7 +5176,7 @@ PrefabInstance:
     - target: {fileID: 7476782877244038737, guid: 167324a55b556c04c879315b0cb6af45,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7476782877244038737, guid: 167324a55b556c04c879315b0cb6af45,
         type: 3}
@@ -5288,47 +5210,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 167324a55b556c04c879315b0cb6af45, type: 3}
---- !u!28 &857120183
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (16)_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: 0000884264ae76427e4ca7420000803f000088425cd76b42a828aa420000803f66e68942d81a63429a21a8420000803f12c3874214f657427eccaa420000803f856b884200485342a8a8a9420000803fecd18a427a5c4b426a9eab420000803fbe9f8d421ecd42424142aa420000803fa4708842ac8f36424142ab420000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &857473544
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5374,7 +5255,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 09944f62ee49ac94088022ec6ebb2281,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 09944f62ee49ac94088022ec6ebb2281,
         type: 3}
@@ -5490,7 +5371,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1953350797}
   - {fileID: 2090423088}
   - {fileID: 249550460}
   - {fileID: 143256516}
@@ -5499,7 +5379,7 @@ Transform:
   - {fileID: 2123260850}
   - {fileID: 1054465348}
   m_Father: {fileID: 527177424}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &917061460
 PrefabInstance:
@@ -5546,7 +5426,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
@@ -5965,6 +5845,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e856ae66e20847e42aa848150b5e8e45, type: 3}
+--- !u!28 &962180600
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lightning (12)_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: 9c999bc27814cb42fc9850420000803f9c999bc2f4a8c5424e5156420000803f36b399c2b24ac142344352420000803f8ad69bc250b8bb42fc9857420000803f162e9bc24661b9424e5155420000803fb0c798c2846bb542d43c59420000803fdef995c2d423b142828456420000803ff8289bc21c05ab42828458420000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &963966227
 GameObject:
   m_ObjectHideFlags: 0
@@ -6000,7 +5921,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -6050,7 +5971,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -6071,7 +5992,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 347002451}
+      objectReference: {fileID: 61732528}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6087,6 +6008,11 @@ PrefabInstance:
       propertyPath: m_RendererPriority
       value: 116
       objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
 --- !u!1001 &979174476
@@ -6094,7 +6020,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -6144,7 +6070,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -6165,7 +6091,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 2007767127}
+      objectReference: {fileID: 1579141636}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6181,6 +6107,11 @@ PrefabInstance:
       propertyPath: m_RendererPriority
       value: 116
       objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
 --- !u!4 &994236343 stripped
@@ -6189,45 +6120,13 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 321462898}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1054465347 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 410929dc12a461a45875da53c616c1d2,
-    type: 3}
-  m_PrefabInstance: {fileID: 565811472}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1054465348 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
-    type: 3}
-  m_PrefabInstance: {fileID: 565811472}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1054465349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1054465347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ded6fa5818a0e04a8bf8ba2e679cda4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.1
-  spin: 1
---- !u!4 &1087252668 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
-    type: 3}
-  m_PrefabInstance: {fileID: 594524599}
-  m_PrefabAsset: {fileID: 0}
---- !u!28 &1091611708
+--- !u!28 &1000462353
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (1)_PositionMap
+  m_Name: Lightning (16)_PositionMap
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -6257,23 +6156,167 @@ Texture2D:
   m_LightmapFormat: 0
   m_ColorSpace: 0
   image data: 128
-  _typelessdata: 000af7bfc0f57642b5e6adc20000803f000af7bfb81e6c428b0aabc20000803f00e17abf346263429911adc20000803fc02203c0703d5842b566aac20000803f8028dcbf5c8f53428b8aabc20000803f001e05bfd6a34b42c994a9c20000803f00cb613f7a144342f3f0aac20000803f00e1dabf08d73642f3f0a9c20000803f
+  _typelessdata: 0000884264ae76427e4ca7420000803f000088425cd76b42a728aa420000803f66e68942d81a63429a21a8420000803f12c3874214f657427eccaa420000803f856b884200485342a7a8a9420000803fecd18a427a5c4b426a9eab420000803fbe9f8d421ecd42424142aa420000803fa4708842ac8f36424142ab420000803f
   m_StreamData:
     offset: 0
     size: 0
     path: 
+--- !u!28 &1042210618
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lightning (10)_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: 648fe8417814cb42d0331ac20000803f648fe841f4a8c5427e7b14c20000803ffc28f041b24ac142988918c20000803fac9be74150b8bb42d03313c20000803f783dea414661b9427e7b15c20000803f14d7f341846bb542f88f11c20000803f5c0eff41d423b1424a4814c20000803ff451ea411c05ab424a4812c20000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
+--- !u!1 &1054465347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 410929dc12a461a45875da53c616c1d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 565811472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1054465348 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 565811472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1054465349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054465347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ded6fa5818a0e04a8bf8ba2e679cda4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.1
+  spin: 1
+--- !u!28 &1063052346
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lightning (15)_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: 8066264064ae76426098ef410000803f806626405cd76b420409fb410000803f40336340d81a6342d0ecf2410000803fc0c81e4014f657426098fd410000803f40d73340004853420409f9410000803f005280407a5c4b42077000420000803f202fad401ecd42426a6ffb410000803f007b3440ac8f36426a6fff410000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
+--- !u!4 &1087252668 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
+    type: 3}
+  m_PrefabInstance: {fileID: 594524599}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1107649880 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
     type: 3}
   m_PrefabInstance: {fileID: 832540554}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1159188504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1159188505}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1159188505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159188504}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.789223, y: 16.353743, z: -44.083897}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1200724284
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -6323,7 +6366,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -6344,7 +6387,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 1704819232}
+      objectReference: {fileID: 460603654}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6354,6 +6397,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
@@ -6463,6 +6511,47 @@ OffMeshLink:
   m_BiDirectional: 0
   m_Activated: 1
   m_AutoUpdatePositions: 0
+--- !u!28 &1270085114
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lightning (11)_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: 9c999bc27814cb42d0331ac20000803f9c999bc2f4a8c5427e7b14c20000803f36b399c2b24ac142988918c20000803f8ad69bc250b8bb42d03313c20000803f162e9bc24661b9427e7b15c20000803fb0c798c2846bb542f88f11c20000803fdef995c2d423b1424a4814c20000803ff8289bc21c05ab424a4812c20000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1001 &1273060262
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6628,12 +6717,42 @@ Transform:
   m_Father: {fileID: 527177424}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1370270847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1370270848}
+  m_Layer: 0
+  m_Name: Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1370270848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370270847}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 38.79, y: -44.74, z: -46.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 42399597}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1384431009
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -6683,7 +6802,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -6704,7 +6823,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 272900560}
+      objectReference: {fileID: 1603598481}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6714,6 +6833,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
@@ -6753,6 +6877,47 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1949089013}
   m_PrefabAsset: {fileID: 0}
+--- !u!28 &1441410205
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lightning (5)_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: cccc9542c0f576424b19cd420000803fcccc9542b81e6c4274f5cf420000803f32b397423462634267eecd420000803fde8f9542703d58424b99d0420000803f513896425c8f53427475cf420000803fb89e9842d6a34b42376bd1420000803f8a6c9b427a1443420e0fd0420000803f703d964208d736420e0fd1420000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &1461786834
 GameObject:
   m_ObjectHideFlags: 0
@@ -6878,7 +7043,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -6928,7 +7093,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -6949,7 +7114,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 325900352}
+      objectReference: {fileID: 2099392204}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6959,6 +7124,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
@@ -6998,12 +7168,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6323644342081088098}
   m_PrefabAsset: {fileID: 0}
+--- !u!28 &1513489216
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lightning (2)_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: 9c99d9c2c0f57642b5e6adc20000803f9c99d9c2b81e6c428b0aabc20000803f34b3d7c2346263429911adc20000803f88d6d9c2703d5842b566aac20000803f182ed9c25c8f53428b8aabc20000803fb0c7d6c2d6a34b42c994a9c20000803fdcf9d3c27a144342f3f0aac20000803ff828d9c208d73642f3f0a9c20000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1001 &1514117401
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -7053,7 +7264,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -7074,7 +7285,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 1531721377}
+      objectReference: {fileID: 2040094165}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7084,6 +7295,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
@@ -7137,47 +7353,6 @@ Transform:
   m_Father: {fileID: 328751218}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!28 &1531721377
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (4)_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: 9c99d9c2c0f576424b19cd420000803f9c99d9c2b81e6c4274f5cf420000803f34b3d7c23462634267eecd420000803f88d6d9c2703d58424b99d0420000803f182ed9c25c8f53427475cf420000803fb0c7d6c2d6a34b42376bd1420000803fdcf9d3c27a1443420e0fd0420000803ff828d9c208d736420e0fd1420000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &1555343679
 GameObject:
   m_ObjectHideFlags: 0
@@ -7234,25 +7409,13 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 778198554}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1607434273 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7476782877244038737, guid: 167324a55b556c04c879315b0cb6af45,
-    type: 3}
-  m_PrefabInstance: {fileID: 849525288}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1620273911 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1842974931, guid: 36a1a725fb7b92f44890be68b90f914f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1799816951}
-  m_PrefabAsset: {fileID: 0}
---- !u!28 &1629498631
+--- !u!28 &1579141636
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (11)_PositionMap
+  m_Name: Lightning (18)_PositionMap
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -7282,11 +7445,64 @@ Texture2D:
   m_LightmapFormat: 0
   m_ColorSpace: 0
   image data: 128
-  _typelessdata: 9c999bc27814cb42d0331ac20000803f9c999bc2f4a8c5427e7b14c20000803f36b399c2b24ac142988918c20000803f8ad69bc250b8bb42d03313c20000803f162e9bc24661b9427e7b15c20000803fb0c798c2846bb542f88f11c20000803fdef995c2d423b1424a4814c20000803ff8289bc21c05ab424a4812c20000803f
+  _typelessdata: 3233674264ae76426098ef410000803f323367425cd76b420409fb410000803ffeff6a42d81a6342d0ecf2410000803f56b9664214f657426098fd410000803f3c0a6842004853420409f9410000803f0ad76c427a5c4b42077000420000803fae7272421ecd42426a6ffb410000803f7a146842ac8f36426a6fff410000803f
   m_StreamData:
     offset: 0
     size: 0
     path: 
+--- !u!28 &1603598481
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lightning (6)_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: feff134268f6ae4164ff0c420000803ffeff134254489941b6b712420000803fcacc17424ccf87419ca90e420000803f22861342880b634164ff13420000803f08d7144230535041b6b711420000803fd6a3194220a530413aa315420000803f7a3f1f42b0670e41e9ea12420000803f46e11442e0e3ba40e8ea14420000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
+--- !u!4 &1607434273 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7476782877244038737, guid: 167324a55b556c04c879315b0cb6af45,
+    type: 3}
+  m_PrefabInstance: {fileID: 849525288}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1620273911 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1842974931, guid: 36a1a725fb7b92f44890be68b90f914f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1799816951}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1634812414 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4460770153449642512, guid: c350ed21834776144b686c12143838aa,
@@ -7307,13 +7523,13 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4732937762076777578, guid: c350ed21834776144b686c12143838aa, type: 3}
---- !u!28 &1668040056
+--- !u!28 &1650109625
 Texture2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (13)_PositionMap
+  m_Name: Lightning (14)_PositionMap
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -7343,7 +7559,97 @@ Texture2D:
   m_LightmapFormat: 0
   m_ColorSpace: 0
   image data: 128
-  _typelessdata: cdccd3427814cb420cf316430000803fcdccd342f4a8c542206118430000803f34b3d542b24ac1429a5d17430000803fe08fd34250b8bb420cb318430000803f5238d4424661b942202118430000803fb89ed642846bb542021c19430000803f8c6cd942d423b142ee6d18430000803f713dd4421c05ab42eeed18430000803f
+  _typelessdata: 8066264064ae76427e4ca7420000803f806626405cd76b42a728aa420000803f40336340d81a63429a21a8420000803fc0c81e4014f657427eccaa420000803f40d7334000485342a7a8a9420000803f005280407a5c4b426a9eab420000803f202fad401ecd42424142aa420000803f007b3440ac8f36424142ab420000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
+--- !u!1 &1661065190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661065191}
+  m_Layer: 0
+  m_Name: Lightning- objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1661065191
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661065190}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 252421456}
+  - {fileID: 675625117}
+  - {fileID: 2021210143}
+  - {fileID: 225695017}
+  - {fileID: 1331452837}
+  - {fileID: 248616462}
+  - {fileID: 1793152832}
+  - {fileID: 1107649880}
+  - {fileID: 335383588}
+  - {fileID: 1781831697}
+  - {fileID: 994236343}
+  - {fileID: 2023027579}
+  - {fileID: 297842939}
+  - {fileID: 25545034}
+  - {fileID: 1087252668}
+  - {fileID: 647649986}
+  - {fileID: 762795286}
+  - {fileID: 302911410}
+  - {fileID: 2065141994}
+  m_Father: {fileID: 527177424}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!28 &1671504965
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lightning (3)_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: 9c99d9c2c0f5764240f66f400000803f9c99d9c2b81e6c42b0bda5400000803f34b3d7c234626342e04c85400000803f88d6d9c2703d584220fbaf400000803f182ed9c25c8f5342b0bd9d400000803fb0c7d6c2d6a34b42d019bd400000803fdcf9d3c27a1443424857a7400000803ff828d9c208d736424857b7400000803f
   m_StreamData:
     offset: 0
     size: 0
@@ -7394,49 +7700,8 @@ Transform:
   - {fileID: 422957902}
   - {fileID: 328751218}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!28 &1704819232
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: 000af7bfc0f57642c047e1bf0000803f000af7bfb81e6c4200f6a8be0000803f00e17abf34626342c000acbf0000803fc02203c0703d584200e023bc0000803f8028dcbf5c8f5342007b14bf0000803f001e05bfd6a34b4200cdcc3e0000803f00cb613f7a144342005c8fbe0000803f00e1dabf08d736420048613e0000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &1716252280 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 83c310db0959b2749a0dbe440dcb7aee,
@@ -7482,7 +7747,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -7532,7 +7797,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -7553,7 +7818,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 44547970}
+      objectReference: {fileID: 1671504965}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7564,6 +7829,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
 --- !u!1001 &1739159688
@@ -7571,7 +7841,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -7621,7 +7891,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -7642,7 +7912,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 1820537335}
+      objectReference: {fileID: 1513489216}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -7653,8 +7923,54 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
+--- !u!28 &1752753697
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lightning (7)_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: 3833e3c168f6ae4164ff0c420000803f3833e3c154489941b6b712420000803fa099dbc14ccf87419ca90e420000803ff026e4c1880b634164ff13420000803f2085e1c130535041b6b711420000803f88ebd7c120a530413aa315420000803f40b4ccc1b0670e41e9ea12420000803fa870e1c1e0e3ba40e8ea14420000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1001 &1753131715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7812,7 +8128,7 @@ Transform:
   - {fileID: 2022954587}
   - {fileID: 563504591}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1763197380
 MonoBehaviour:
@@ -7942,7 +8258,7 @@ PrefabInstance:
     - target: {fileID: 5079081746151000774, guid: 36a1a725fb7b92f44890be68b90f914f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5079081746151000774, guid: 36a1a725fb7b92f44890be68b90f914f,
         type: 3}
@@ -7986,47 +8302,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36a1a725fb7b92f44890be68b90f914f, type: 3}
---- !u!28 &1820537335
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (2)_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: 9c99d9c2c0f57642b5e6adc20000803f9c99d9c2b81e6c428b0aabc20000803f34b3d7c2346263429911adc20000803f88d6d9c2703d5842b566aac20000803f182ed9c25c8f53428b8aabc20000803fb0c7d6c2d6a34b42c994a9c20000803fdcf9d3c27a144342f3f0aac20000803ff828d9c208d73642f3f0a9c20000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &1840889493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8569,6 +8844,36 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: -3262211019407186515, guid: 167324a55b556c04c879315b0cb6af45, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 167324a55b556c04c879315b0cb6af45, type: 3}
+--- !u!1 &1887777166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1887777167}
+  m_Layer: 0
+  m_Name: End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1887777167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887777166}
+  m_LocalRotation: {x: 0.09701191, y: -0, z: -0, w: 0.99528325}
+  m_LocalPosition: {x: 13.08, y: -21.43, z: -106.54}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 42399597}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 11.134001, y: 0, z: 0}
 --- !u!1 &1898668018 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3228240523475718869, guid: e856ae66e20847e42aa848150b5e8e45,
@@ -8619,47 +8924,6 @@ Transform:
   m_Father: {fileID: 1519714554}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!28 &1935318758
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (14)_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: 8066264064ae76427e4ca7420000803f806626405cd76b42a828aa420000803f40336340d81a63429a21a8420000803fc0c81e4014f657427eccaa420000803f40d7334000485342a8a8a9420000803f005280407a5c4b426a9eab420000803f202fad401ecd42424142aa420000803f007b3440ac8f36424142ab420000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &1949089013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9010,27 +9274,27 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 912503246}
+    m_TransformParent: {fileID: 527177424}
     m_Modifications:
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -65.34
+      value: -147.76
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 140.3
+      value: 103.92
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.6294022
+      value: -127.99
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0.17978324
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
@@ -9045,17 +9309,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9837063
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 20.714
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
@@ -9070,12 +9334,12 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.7511964
+      value: 4.2535086
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.7511964
+      value: 1.1617789
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
@@ -9086,11 +9350,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4da1a70e155162348a6b85b287bd5ee1, type: 2}
+      objectReference: {fileID: 2100000, guid: 3017f906b05154449a636bafbeed5203, type: 2}
     - target: {fileID: -927199367670048503, guid: 410929dc12a461a45875da53c616c1d2,
         type: 3}
       propertyPath: m_Name
-      value: Star (1)
+      value: BossStar
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 410929dc12a461a45875da53c616c1d2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 410929dc12a461a45875da53c616c1d2,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 410929dc12a461a45875da53c616c1d2, type: 3}
@@ -9106,88 +9380,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 97005870}
   m_PrefabAsset: {fileID: 0}
---- !u!28 &1969786179
-Texture2D:
+--- !u!1 &1992791319
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (5)_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: cccc9542c0f576424b19cd420000803fcccc9542b81e6c4274f5cf420000803f32b397423462634267eecd420000803fde8f9542703d58424b99d0420000803f513896425c8f53427475cf420000803fb89e9842d6a34b42376bd1420000803f8a6c9b427a1443420e0fd0420000803f703d964208d736420e0fd1420000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
---- !u!28 &2007767127
-Texture2D:
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1992791320}
+  m_Layer: 0
+  m_Name: Boss
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1992791320
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Lightning (18)_PositionMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 2
-  m_Width: 8
-  m_Height: 1
-  m_CompleteImageSize: 128
-  m_TextureFormat: 20
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_IgnoreMasterTextureLimit: 0
-  m_StreamingMipmaps: 0
-  m_StreamingMipmapsPriority: 0
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 0
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 0
-  image data: 128
-  _typelessdata: 3233674264ae76426098ef410000803f323367425cd76b420409fb410000803ffeff6a42d81a6342d0ecf2410000803f56b9664214f657426098fd410000803f3c0a6842004853420409f9410000803f0ad76c427a5c4b42077000420000803fae7272421ecd42426a6ffb410000803f7a146842ac8f36426a6fff410000803f
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
+  m_GameObject: {fileID: 1992791319}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.23, y: 24.75, z: -12.63}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 812432141}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2021210143 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
@@ -9206,12 +9429,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 679911950}
   m_PrefabAsset: {fileID: 0}
+--- !u!28 &2040094165
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lightning (4)_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: 9c99d9c2c0f576424b19cd420000803f9c99d9c2b81e6c4274f5cf420000803f34b3d7c23462634267eecd420000803f88d6d9c2703d58424b99d0420000803f182ed9c25c8f53427475cf420000803fb0c7d6c2d6a34b42376bd1420000803fdcf9d3c27a1443420e0fd0420000803ff828d9c208d736420e0fd1420000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1001 &2041933866
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 527177424}
+    m_TransformParent: {fileID: 1661065191}
     m_Modifications:
     - target: {fileID: 3943474332033452072, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -9261,7 +9525,7 @@ PrefabInstance:
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3943474332033452244, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
@@ -9282,7 +9546,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_PropertySheet.m_NamedObject.m_Array.Array.data[0].m_Value
       value: 
-      objectReference: {fileID: 1969786179}
+      objectReference: {fileID: 1441410205}
     - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -9292,6 +9556,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943474332033452246, guid: ed06378267a080f4c83e1c3ec7e39694,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed06378267a080f4c83e1c3ec7e39694, type: 3}
@@ -9333,6 +9602,47 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 956013794}
   m_PrefabAsset: {fileID: 0}
+--- !u!28 &2099392204
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Lightning (8)_PositionMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 8
+  m_Height: 1
+  m_CompleteImageSize: 128
+  m_TextureFormat: 20
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_IgnoreMasterTextureLimit: 0
+  m_StreamingMipmaps: 0
+  m_StreamingMipmapsPriority: 0
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 0
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 0
+  image data: 128
+  _typelessdata: 3833e3c168f6ae41d49a93c10000803f3833e3c154489941302a88c10000803fa099dbc14ccf8741644690c10000803ff026e4c1880b6341d49a85c10000803f2085e1c130535041302a8ac10000803f88ebd7c120a53041245382c10000803f40b4ccc1b0670e41c8c387c10000803fa870e1c1e0e3ba40c8c383c10000803f
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &2123260849 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 410929dc12a461a45875da53c616c1d2,
@@ -9364,62 +9674,115 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1992791320}
     m_Modifications:
+    - target: {fileID: 812432137, guid: 0c5eba49610f8eb41931507e33b83043, type: 3}
+      propertyPath: MeteorAttack
+      value: 
+      objectReference: {fileID: 1763197378}
+    - target: {fileID: 812432137, guid: 0c5eba49610f8eb41931507e33b83043, type: 3}
+      propertyPath: AttackPosition
+      value: 
+      objectReference: {fileID: 1887777167}
     - target: {fileID: 5369653130698587526, guid: 0c5eba49610f8eb41931507e33b83043,
         type: 3}
       propertyPath: m_Name
       value: MainBossv0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 5369653130698587526, guid: 0c5eba49610f8eb41931507e33b83043,
+    - target: {fileID: 5553710177078488994, guid: 0c5eba49610f8eb41931507e33b83043,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: m_Materials.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 6058365971239434584, guid: 0c5eba49610f8eb41931507e33b83043,
+    - target: {fileID: 5553710177078489004, guid: 0c5eba49610f8eb41931507e33b83043,
         type: 3}
-      propertyPath: TargetMask.m_Bits
-      value: 1024
+      propertyPath: m_LocalPosition.x
+      value: -0.015
       objectReference: {fileID: 0}
+    - target: {fileID: 5553710177078489004, guid: 0c5eba49610f8eb41931507e33b83043,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.129
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553710177078489004, guid: 0c5eba49610f8eb41931507e33b83043,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.484
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553710177078489004, guid: 0c5eba49610f8eb41931507e33b83043,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.38744143
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553710177078489004, guid: 0c5eba49610f8eb41931507e33b83043,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.38744143
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553710177078489004, guid: 0c5eba49610f8eb41931507e33b83043,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.38744143
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553710177374595192, guid: 0c5eba49610f8eb41931507e33b83043,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.923
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553710177690156273, guid: 0c5eba49610f8eb41931507e33b83043,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5553710178328917015, guid: 0c5eba49610f8eb41931507e33b83043,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.373
+      objectReference: {fileID: 0}
+    - target: {fileID: 7394264881639041909, guid: 0c5eba49610f8eb41931507e33b83043,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0eadd45eb3d5f77459c0885f6ecc8c1b, type: 2}
     - target: {fileID: 8998067580653309845, guid: 0c5eba49610f8eb41931507e33b83043,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.51
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8998067580653309845, guid: 0c5eba49610f8eb41931507e33b83043,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.23
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8998067580653309845, guid: 0c5eba49610f8eb41931507e33b83043,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8998067580653309845, guid: 0c5eba49610f8eb41931507e33b83043,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 6.123234e-17
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8998067580653309845, guid: 0c5eba49610f8eb41931507e33b83043,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8998067580653309845, guid: 0c5eba49610f8eb41931507e33b83043,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -6.123234e-17
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8998067580653309845, guid: 0c5eba49610f8eb41931507e33b83043,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -6.123234e-17
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8998067580653309845, guid: 0c5eba49610f8eb41931507e33b83043,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8998067580653309845, guid: 0c5eba49610f8eb41931507e33b83043,
         type: 3}
@@ -9503,7 +9866,7 @@ PrefabInstance:
     - target: {fileID: 7476782877244038737, guid: 167324a55b556c04c879315b0cb6af45,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7476782877244038737, guid: 167324a55b556c04c879315b0cb6af45,
         type: 3}

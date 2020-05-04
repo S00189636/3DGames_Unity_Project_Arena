@@ -15,12 +15,12 @@ public class EnemyBase : MonoBehaviour
     public string TargetTag = "Player";
     public LayerMask TargetMask;
     public Transform CenterPoint;
-    public EnemyState EnemyCurrentState 
-    { 
-        get {return _EnemyCurrentState; }  
-        set { _EnemyCurrentState = value; } 
+    public EnemyState EnemyCurrentState
+    {
+        get { return _EnemyCurrentState; }
+        
     }
-    protected  GameObject Target;
+    protected GameObject Target;
     protected EnemyState _EnemyCurrentState;
     protected bool TargetInFOV = false;
     public virtual void Start()
@@ -36,40 +36,41 @@ public class EnemyBase : MonoBehaviour
 
     public void TrackTarget()
     {
-        Collider[] TargetHits;
-        TargetHits = Physics.OverlapSphere(CenterPoint.position, VisionDistance, TargetMask);
-
-        if (TargetHits.Length > 0)
+        //Collider[] TargetHits;
+        //TargetHits = Physics.OverlapSphere(CenterPoint.position, VisionDistance, TargetMask);
+        if (Physics.Raycast(CenterPoint.position, // origin 
+            (Target.transform.position - CenterPoint.position).normalized, // direction
+            out RaycastHit TargetHit, VisionDistance, TargetMask))
         {
             // Find direstion of target
-            Vector3 PlayerDirection = TargetHits[0].transform.position - CenterPoint.position;
+            Vector3 PlayerDirection = TargetHit.point - CenterPoint.position;
             // Calculates angle from z-axis to target position
             float Angle = Vector3.Angle(CenterPoint.forward, PlayerDirection);
 
             // Check if target is in FOV
             TargetInFOV = Angle <= FieldOfView;
         }
-        else
-        {
-            TargetInFOV = false;
-        }
     }
 
     private void OnDrawGizmos()
     {
-        Vector3 Line1;
-        Vector3 Line2;
 
         // Sphere Vision
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(CenterPoint.position, VisionDistance);
 
-        // FOV
-        Gizmos.color = Color.yellow;
+        //Attack Distance 
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(CenterPoint.position, CenterPoint.forward.normalized * AttackDistance);
+
+        // FOV Lines
+        Vector3 Line1;
+        Vector3 Line2;
         Line1 = Quaternion.AngleAxis(FieldOfView, CenterPoint.up) * CenterPoint.forward * VisionDistance;
         Line2 = Quaternion.AngleAxis(-FieldOfView, CenterPoint.up) * CenterPoint.forward * VisionDistance;
 
         // Draw FOV
+        Gizmos.color = Color.yellow;
         Gizmos.DrawRay(CenterPoint.position, Line1);
         Gizmos.DrawRay(CenterPoint.position, Line2);
 
@@ -79,7 +80,7 @@ public class EnemyBase : MonoBehaviour
             Gizmos.color = Color.red;
             Gizmos.DrawRay(CenterPoint.position, ((Target.transform.position + Vector3.up) - CenterPoint.position).normalized * VisionDistance);
         }
-        
+
 
     }
 }
