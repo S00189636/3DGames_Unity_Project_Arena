@@ -9,6 +9,7 @@ public class AINAVMovement : EnemyBase
 {
 
     public NavMeshAgent Agent;
+    public bool PlayerChangedPos { get { return Agent.destination != PlayerPosition; } }
     public Vector3 PlayerPosition { 
         get 
         {
@@ -25,6 +26,7 @@ public class AINAVMovement : EnemyBase
 
     public void Move(Vector3 _destination)
     {
+        Agent.isStopped = false;
         Agent.SetDestination(_destination);
         _EnemyCurrentState = EnemyState.Moving;
     }

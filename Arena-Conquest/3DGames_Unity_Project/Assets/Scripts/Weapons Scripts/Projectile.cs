@@ -66,7 +66,7 @@ public class Projectile : MonoBehaviour
             //Debug.Log($"Projectile- not ignored : i am: {transform.name} - hit layer: {LayerMask.LayerToName(collision.gameObject.layer)}");
             if (collision.gameObject.tag == EnemyTag)
             {
-                collision.gameObject.GetComponent<Health>().TakeDamage(Damage);
+                collision.gameObject.GetComponent<Health>()?.TakeDamage(Damage);
                 transform.parent = collision.transform;
             }
             else
