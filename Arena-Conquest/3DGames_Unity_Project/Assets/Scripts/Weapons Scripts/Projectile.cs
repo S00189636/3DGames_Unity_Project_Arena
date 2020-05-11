@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(AudioSource))]
 public class Projectile : MonoBehaviour
 {
 
@@ -15,7 +16,17 @@ public class Projectile : MonoBehaviour
     public bool DestroyOnImpact = false;
     public float DestroyAfter = 1;
     Rigidbody body { get { return this.GetComponent<Rigidbody>(); } }
+    AudioSource Source;
     bool move = true;
+
+
+    private void Start()
+    {
+        Source = GetComponent<AudioSource>();
+        if (Source.clip != null)
+            Source.Play();
+    }
+
     public Vector3 Direction
     {
         get
@@ -37,8 +48,8 @@ public class Projectile : MonoBehaviour
             transform.up = direction;
             //quaternion.lookrotation(direction);
             body.velocity = Direction * Speed;
-            Speed -= 0.01f * Time.deltaTime;
-            Mathf.Clamp(Speed, 0, 200);
+            //Speed -= 0.01f * Time.deltaTime;
+            //Speed = Mathf.Clamp(Speed, 0, 200);
             //transform.LookAt(body.velocity,-transform.up);
         }
         //Debug.Log($"not moving :(");
@@ -48,9 +59,9 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
 
-        if (collision.gameObject.layer == IgnoreLayer)
+        if (collision.gameObject.layer == IgnoreLayer || collision.gameObject.tag.Contains("Projectile"))
         {
-            Debug.Log($"Projectile: We hit: {collision.transform.name} - On layer: {collision.gameObject.layer}");
+            //Debug.Log($"Projectile: We hit but ignored: {collision.transform.name} - On layer: {collision.gameObject.layer}");
             return;
         }
         if (move)
@@ -66,7 +77,7 @@ public class Projectile : MonoBehaviour
             //Debug.Log($"Projectile- not ignored : i am: {transform.name} - hit layer: {LayerMask.LayerToName(collision.gameObject.layer)}");
             if (collision.gameObject.tag == EnemyTag)
             {
-                collision.gameObject.GetComponent<Health>()?.TakeDamage(Damage);
+                collision.gameObject.GetComponent<Health>().TakeDamage(Damage);
                 transform.parent = collision.transform;
             }
             else

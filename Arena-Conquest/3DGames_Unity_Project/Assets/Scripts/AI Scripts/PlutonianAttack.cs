@@ -89,7 +89,7 @@ public class PlutonianAttack : MonoBehaviour
         Gizmos.DrawLine(CenterPoint.position, (MovementRef.PlayerPosition));
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         GetComponent<Health>().OnDeath -= PlutonianAttack_OnDeath;
     }

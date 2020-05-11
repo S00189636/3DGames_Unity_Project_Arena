@@ -40,9 +40,10 @@ public class MainBoss : MonoBehaviour
 
     private void Start()
     {
-        NormalAttackDuration = MaxNormalAttackDuration;
         GetComponent<Health>().OnTakingDamage += MainBoss_OnTakingDamage;
         GetComponent<Health>().OnDeath += MainBoss_OnDeath;
+        NormalAttackDuration = MaxNormalAttackDuration;
+        SwitchToNormalAttack();
     }
 
 
@@ -57,6 +58,8 @@ public class MainBoss : MonoBehaviour
     private void MainBoss_OnTakingDamage(float amount)
     {
         print("this hurts");
+        NormalAttackDuration -= (amount/0.3f);
+        NormalAttackDuration = Mathf.Clamp(NormalAttackDuration, 40, MaxNormalAttackDuration);
     }
 
     private void Update()
@@ -64,7 +67,6 @@ public class MainBoss : MonoBehaviour
 
         CurrentState = MovementRef.EnemyCurrentState;
         float Distance = Vector3.Distance(transform.position, MovementRef.PlayerPosition);
-
 
         switch (CurrentState)
         {
@@ -166,8 +168,6 @@ public class MainBoss : MonoBehaviour
         Move(MovementRef.PlayerPosition);
         CurrentAttackingState = AttackingState.NormalAttack;
         SwitchAttackTimer = Time.time + NormalAttackDuration;
-        NormalAttackDuration-=3;
-        NormalAttackDuration = Mathf.Clamp(NormalAttackDuration, 40, MaxNormalAttackDuration);
         BodyRenderer.material.SetColor("_EmissiveColor", NormalColour);
     }
 

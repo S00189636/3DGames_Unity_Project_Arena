@@ -12,22 +12,24 @@ public class Movement : MonoBehaviour
     public float groundCheckDis;
     public LayerMask groundCheckMask;
     public LayerMask groundDamageMask;
-    public LayerMask PlatformMask;
+    public float GroundDamage;
     public Transform groundCheckTransform;
-    public bool isGrounded;
 
+    bool isGrounded;
     private CharacterController controller;
     private Vector3 velocity = Vector3.zero;
-
-    event Death OnDeath;
-
 
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
-        GetComponent<Health>().OnDeath += OnDeath;
+        GetComponent<Health>().OnDeath += Movement_OnDeath;
 
+    }
+
+    private void Movement_OnDeath()
+    {
+        print("Player is no more :(");
     }
 
     private void Update()
@@ -49,18 +51,12 @@ public class Movement : MonoBehaviour
 
         // checking for ground 
         isGrounded = Physics.CheckSphere(groundCheckTransform.position, groundCheckDis, groundCheckMask);
+        // checking for ground damage
         if (Physics.CheckSphere(groundCheckTransform.position, groundCheckDis, groundDamageMask))
         {
-            GetComponent<Health>().TakeDamage(0.01f);
+            print("Player Is on ground damage");
+            GetComponent<Health>().TakeDamage(GroundDamage);
         }
-
-        //if (Physics.CheckSphere(groundCheckTransform.position, groundCheckDis, PlatformMask))
-        //{
-        //    //this.transform.parent = GameObject.FindGameObjectWithTag("Platform").transform;
-        //    this.transform.position = GameObject.FindGameObjectWithTag("Platform").transform.position + this.transform.position;
-        //    Debug.Log("On Platform");
-
-        //}
 
         if (isGrounded && velocity.y < 0)
             velocity.y = -jumpHeight;
@@ -76,7 +72,6 @@ public class Movement : MonoBehaviour
             //Debug.Log("Jump");
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravitySpeed);
         }
-
 
         controller.Move(velocity * Time.deltaTime);
 

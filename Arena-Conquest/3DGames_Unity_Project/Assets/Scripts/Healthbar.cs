@@ -8,9 +8,11 @@ public class Healthbar : MonoBehaviour
     public Transform bar;
     public Health Health;
     Vector3 barX = Vector3.one;
+    
     private void Start()
     {
         Health.OnTakingDamage += Health_OnTakingDamage;
+        barX = bar.transform.localScale;
     }
 
 

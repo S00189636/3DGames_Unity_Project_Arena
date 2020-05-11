@@ -83,4 +83,9 @@ public class EnemyBase : MonoBehaviour
 
 
     }
+
+    private void OnDestroy()
+    {
+        LevelManager.IDied(gameObject);
+    }
 }

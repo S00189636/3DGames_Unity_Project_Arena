@@ -327,7 +327,7 @@ MonoBehaviour:
   Animator: {fileID: 6689296626672952621}
   fireRate: 2.5
   Explosion: {fileID: 100004, guid: bd5a7ae3e8bd4c8499f69e8e45138021, type: 3}
-  Damage: 15
+  Damage: 5
 --- !u!136 &1179630254
 CapsuleCollider:
   m_ObjectHideFlags: 0

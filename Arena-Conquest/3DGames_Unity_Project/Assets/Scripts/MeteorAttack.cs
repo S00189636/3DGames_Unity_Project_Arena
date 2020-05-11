@@ -90,6 +90,7 @@ public class MeteorAttack : MonoBehaviour
         projectile.GetComponent<Rigidbody>().useGravity = false;
         projectile.GetComponent<Projectile>().Damage = Damage;
         projectile.GetComponent<Projectile>().Speed = MeteorSpeed;
+        projectile.SetActive(true);
         counter++;
         timeToSpawn = Time.time + CoolDown;
     }

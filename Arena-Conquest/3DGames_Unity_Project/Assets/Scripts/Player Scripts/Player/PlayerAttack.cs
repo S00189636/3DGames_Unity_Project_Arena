@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,16 +15,20 @@ public class PlayerAttack : MonoBehaviour
     public Transform FirePoint;
     private int hitCounter = 0;
     public Crosshair Crosshair;
+    private float timer;
+
     private Vector3 hitPos { get { return Crosshair.raycastHit.point == Vector3.zero ? FirePoint.up : (Crosshair.raycastHit.point - FirePoint.position).normalized; } }
     void Update()
     {
+
         PickupState = GetComponent<Pickup>().pickupState;
+        // fire
         if (Input.GetButtonUp(FireButton))
         {
             if (PickupState == PickupState.HasWeapon)
             {
-                hitCounter++;
                 currentWeapon = GetComponent<Pickup>().currentWeapon.GetComponent<Weapon>();
+                hitCounter++;
                 //print($"PlayerAttack: hit pos: {hitpos}");
                 currentWeapon.Fire(hitPos, FirePoint.rotation);
                 //currentWeapon.Fire(CrosshairLandMark);
@@ -33,7 +38,7 @@ public class PlayerAttack : MonoBehaviour
                 }
             }
         }
-
+        // drop
         if (Input.GetButtonUp(DropWeaponButton))
         {
             if (PickupState == PickupState.HasWeapon)
@@ -49,6 +54,7 @@ public class PlayerAttack : MonoBehaviour
     }
     private void DropWeapon(float destroyAfter)
     {
+        currentWeapon = GetComponent<Pickup>().currentWeapon.GetComponent<Weapon>();
         hitCounter = 0;
         Destroy(currentWeapon.gameObject, destroyAfter);
         GetComponent<Pickup>().pickupState = PickupState.Empty;

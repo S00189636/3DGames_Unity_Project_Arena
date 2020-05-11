@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\ExplosionDamage.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\Healthbar.cs" />
+    <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\LookAtCamera.cs" />
     <Compile Include="Assets\Scripts\MeteorAttack.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Player\CameraLook.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Assets\Scripts\Player Scripts\Player\Movement.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Player\Pickup.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\Player\PlayerAttack.cs" />
+    <Compile Include="Assets\Scripts\Player Scripts\Player\PlayerHUD.cs" />
     <Compile Include="Assets\Scripts\SelfDestruct.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\Spin.cs" />
@@ -102,21 +104,38 @@
     <Compile Include="Assets\Unity-Logs-Viewer\Reporter\ReporterMessageReceiver.cs" />
     <Compile Include="Assets\Unity-Logs-Viewer\Reporter\Test\Rotate.cs" />
     <Compile Include="Assets\Unity-Logs-Viewer\Reporter\Test\TestReporter.cs" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Content\Visual Effects\Dee-Shaw\Information.txt" />
     <None Include="Assets\Content\Lava_Flowing_Shader\Shaders\Diffuse_Lava_Distort.shader" />
     <None Include="Assets\Content\Models\Models Folder.txt" />
     <None Include="Assets\Scripts\Weapons Scripts\Weapons Scripts Folder.txt" />
     <None Include="Assets\Content\Visual Effects\Dee-Shaw\Laser Pack\Manual\Manual.txt" />
     <None Include="Assets\Scripts\AI Scripts\AI Scripst.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Content\Lava_Flowing_Shader\ReadMe.txt" />
     <None Include="Assets\Content\Sprites\Sprites Folder.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Content\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort_Transparent.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Content\Fonts\Fonts Folder.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Content\Lava_Flowing_Shader\Shaders\Unlit_Lava_Distort.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Content\Materials\Materials Folder.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Samples\High Definition RP\7.1.8\Procedural Sky\Runtime\ProceduralSky\Resources\ProceduralSky.shader" />
-    <None Include="Assets\Prefabs\prefabsFolder.txt" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\Content\Lava_Flowing_Shader\Shaders\Unlit_Lava_Simple.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/PC/Documents/GitHub/3DGames_Unity_Project_Arena/Arena-Conquest/3DGames_Unity_Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
