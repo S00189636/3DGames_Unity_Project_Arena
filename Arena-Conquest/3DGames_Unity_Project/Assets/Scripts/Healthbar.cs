@@ -11,10 +11,12 @@ public class Healthbar : MonoBehaviour
     
     private void Start()
     {
-        Health.OnTakingDamage += Health_OnTakingDamage;
         barX = bar.transform.localScale;
     }
-
+    private void OnEnable()
+    {
+        Health.OnTakingDamage += Health_OnTakingDamage;
+    }
 
     private void Health_OnTakingDamage(float amount)
     {

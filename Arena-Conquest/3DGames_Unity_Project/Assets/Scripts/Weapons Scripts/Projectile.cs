@@ -58,7 +58,7 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
 
-        if (collision.gameObject.layer == IgnoreLayer || LayerMask.LayerToName(collision.gameObject.layer).Contains(LayerMask.LayerToName(gameObject.layer)))
+        if (collision.gameObject.layer == IgnoreLayer || collision.gameObject.tag.Equals("Projectile"))
         {
             //Debug.Log($"Projectile: We hit but ignored: {collision.transform.name} - On layer: {collision.gameObject.layer}");
             return;

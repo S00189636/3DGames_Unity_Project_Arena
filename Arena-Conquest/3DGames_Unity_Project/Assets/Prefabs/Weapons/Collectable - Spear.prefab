@@ -63,7 +63,7 @@ MonoBehaviour:
   Image: {fileID: 21300000, guid: 1840d128d74e4b6449f9097a605029a7, type: 3}
   Damage: 25
   destroyAfter: 0
-  Durability: 3
+  Durability: 4
   WeaponType: 0
   ThrowPower: 110
   PrjectailPrefab: {fileID: 2703821763015549777, guid: f102fa4915482384bae3b5205b05ad0b,
