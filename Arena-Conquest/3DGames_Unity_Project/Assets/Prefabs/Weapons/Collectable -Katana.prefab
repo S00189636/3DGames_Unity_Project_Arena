@@ -80,6 +80,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Katana
+  Image: {fileID: 21300000, guid: 8ec99d3d9a62d1e4285bdb2390cae233, type: 3}
   Damage: 20
   destroyAfter: 1
   Durability: 5

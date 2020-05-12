@@ -19,7 +19,7 @@ public class MainBoss : MonoBehaviour
 
     public MeteorAttack MeteorAttack;
     public Spawner EnemySpawner;
-    public Transform AttackPosition;
+    public Transform CastPosition;
     public Animator Animator;
     public Transform[] Arms;
     public Transform[] NormalFirePoint;
@@ -59,7 +59,7 @@ public class MainBoss : MonoBehaviour
     {
         print("this hurts");
         NormalAttackDuration -= (amount/0.3f);
-        NormalAttackDuration = Mathf.Clamp(NormalAttackDuration, 40, MaxNormalAttackDuration);
+        NormalAttackDuration = Mathf.Clamp(NormalAttackDuration, 20, MaxNormalAttackDuration);
     }
 
     private void Update()
@@ -107,8 +107,8 @@ public class MainBoss : MonoBehaviour
                         break;
                     case AttackingState.Spawning:
                         // stand far and order the spawner to start spawning 
-                        if (!IsAtDestination(AttackPosition.position))
-                            Move(AttackPosition.position);
+                        if (!IsAtDestination(CastPosition.position))
+                            Move(CastPosition.position);
                         else
                         {
                             if (EnemySpawner.enabled)
@@ -137,8 +137,8 @@ public class MainBoss : MonoBehaviour
                         }
 
                         // go to star and do the animation then start the Meteor Attack
-                        if (!IsAtDestination(AttackPosition.position))
-                            Move(AttackPosition.position);
+                        if (!IsAtDestination(CastPosition.position))
+                            Move(CastPosition.position);
                         else
                         {
                             print("Stars attack");
@@ -215,6 +215,7 @@ public class MainBoss : MonoBehaviour
     private void Shoot()
     {
         if (NormalAttackTimer >= Time.time) return;
+
         foreach (var point in NormalFirePoint)
             ShootFrom(point);
         NormalAttackTimer = Time.time + NormalFireRate;

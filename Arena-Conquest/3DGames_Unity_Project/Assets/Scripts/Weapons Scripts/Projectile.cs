@@ -59,7 +59,7 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
 
-        if (collision.gameObject.layer == IgnoreLayer || collision.gameObject.tag.Contains("Projectile"))
+        if (collision.gameObject.layer == IgnoreLayer || LayerMask.LayerToName(collision.gameObject.layer).Contains("Projectile"))
         {
             //Debug.Log($"Projectile: We hit but ignored: {collision.transform.name} - On layer: {collision.gameObject.layer}");
             return;
@@ -74,7 +74,7 @@ public class Projectile : MonoBehaviour
             body.isKinematic = true;
 
             //transform.position += collision.transform.position;
-            //Debug.Log($"Projectile- not ignored : i am: {transform.name} - hit layer: {LayerMask.LayerToName(collision.gameObject.layer)}");
+            Debug.Log($"Projectile- not ignored : i am: {transform.name} - hit layer: {LayerMask.LayerToName(collision.gameObject.layer)}");
             if (collision.gameObject.tag == EnemyTag)
             {
                 collision.gameObject.GetComponent<Health>().TakeDamage(Damage);

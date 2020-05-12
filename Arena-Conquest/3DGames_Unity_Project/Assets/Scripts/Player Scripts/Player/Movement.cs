@@ -54,7 +54,7 @@ public class Movement : MonoBehaviour
         // checking for ground damage
         if (Physics.CheckSphere(groundCheckTransform.position, groundCheckDis, groundDamageMask))
         {
-            print("Player Is on ground damage");
+            //print("Player Is on ground damage");
             GetComponent<Health>().TakeDamage(GroundDamage);
         }
 

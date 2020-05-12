@@ -9,6 +9,7 @@ public enum PickupState
     HasWeapon
 }
 
+public delegate void PickedUp(GameObject pickedfUpWeapon);
 public class Pickup : MonoBehaviour
 {
 
@@ -17,6 +18,7 @@ public class Pickup : MonoBehaviour
     public GameObject currentWeapon = null;
     public float castDistance = 50f;
     public PickupState pickupState = PickupState.Empty;
+    public static event PickedUp OnPickup ;
     //public float xOffSet;
 
     private void Update()
@@ -55,6 +57,8 @@ public class Pickup : MonoBehaviour
                 if (currentWeapon != null)
                     Destroy(currentWeapon.gameObject);
                 currentWeapon = pickedUp;
+                if (OnPickup != null)
+                    OnPickup(pickedUp);
                 pickupState = PickupState.HasWeapon;
                 Destroy(item.transform.gameObject);
             }

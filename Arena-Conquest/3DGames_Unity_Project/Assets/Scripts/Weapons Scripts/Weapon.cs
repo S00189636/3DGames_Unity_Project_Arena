@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum WeaponType
 {
@@ -10,7 +11,7 @@ public enum WeaponType
 
 public class Weapon : Collectable
 {
-
+    public Sprite Image;
     public float Damage;
     public float destroyAfter;
     protected Rigidbody body { get { return GetComponent<Rigidbody>(); } }

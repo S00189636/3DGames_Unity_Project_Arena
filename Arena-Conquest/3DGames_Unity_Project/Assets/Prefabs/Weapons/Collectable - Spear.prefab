@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Spear
+  Image: {fileID: 21300000, guid: 1840d128d74e4b6449f9097a605029a7, type: 3}
   Damage: 25
   destroyAfter: 0
   Durability: 3

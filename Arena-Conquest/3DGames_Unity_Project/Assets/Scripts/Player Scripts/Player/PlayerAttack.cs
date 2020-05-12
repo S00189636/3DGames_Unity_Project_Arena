@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
+public delegate void PlayerFired(int hitCounter);
+public delegate void PlayerDropedWeapon();
 public class PlayerAttack : MonoBehaviour
 {
 
@@ -16,6 +17,8 @@ public class PlayerAttack : MonoBehaviour
     private int hitCounter = 0;
     public Crosshair Crosshair;
     private float timer;
+    public static event PlayerFired OnPlayerFired;
+    public static event PlayerDropedWeapon OnPlayerWeaponDroped;
 
     private Vector3 hitPos { get { return Crosshair.raycastHit.point == Vector3.zero ? FirePoint.up : (Crosshair.raycastHit.point - FirePoint.position).normalized; } }
     void Update()
@@ -31,6 +34,8 @@ public class PlayerAttack : MonoBehaviour
                 hitCounter++;
                 //print($"PlayerAttack: hit pos: {hitpos}");
                 currentWeapon.Fire(hitPos, FirePoint.rotation);
+
+                if (OnPlayerFired!=null)  OnPlayerFired(hitCounter);
                 //currentWeapon.Fire(CrosshairLandMark);
                 if (hitCounter >= currentWeapon.Durability)
                 {
@@ -54,6 +59,7 @@ public class PlayerAttack : MonoBehaviour
     }
     private void DropWeapon(float destroyAfter)
     {
+        if (OnPlayerWeaponDroped != null) OnPlayerWeaponDroped();
         currentWeapon = GetComponent<Pickup>().currentWeapon.GetComponent<Weapon>();
         hitCounter = 0;
         Destroy(currentWeapon.gameObject, destroyAfter);

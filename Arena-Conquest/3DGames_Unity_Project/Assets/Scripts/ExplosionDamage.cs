@@ -15,8 +15,10 @@ public class ExplosionDamage : MonoBehaviour
         hits = Physics.OverlapSphere(this.transform.position, DamageRadius, EnemiesLayer);
         foreach (var item in hits)
         {
+            Health hitHealth = item.gameObject.GetComponent<Health>();
+            if (hitHealth == null) continue;
             //print(item.name);
-            item.gameObject.GetComponent<Health>().TakeDamage(Damage);
+            hitHealth.TakeDamage(Damage);
         }
         Destroy(this.gameObject, DestroyAfter);
     }
