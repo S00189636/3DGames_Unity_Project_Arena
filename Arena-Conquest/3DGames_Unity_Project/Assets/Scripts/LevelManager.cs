@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 
-enum GameState
+public enum GameState
 {
     Started,
     Playing,
@@ -16,6 +16,8 @@ enum GameState
 public delegate void EnemyDied(GameObject gameObject);
 public class LevelManager : MonoBehaviour
 {
+    public static GameState currentGameState;
+
     public AudioClip[] AudioClips;
     public Transform playerSpawnPosition;
     public bool MusicOn;
@@ -25,7 +27,6 @@ public class LevelManager : MonoBehaviour
     public GameObject PlayerHUD;
 
     int currentTrackIndex;
-    GameState currentGameState;
     AudioSource Source;
     bool paused = false;
     public static event EnemyDied OnEnemyDied;

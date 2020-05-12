@@ -7,14 +7,16 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
 
+
     public string EnemyTag;
     public float Damage;
     public float Speed;
     public LayerMask IgnoreLayer;
-    Vector3 direction;
     public GameObject EffectImpact;
     public bool DestroyOnImpact = false;
     public float DestroyAfter = 1;
+
+    Vector3 direction;
     Rigidbody body { get { return this.GetComponent<Rigidbody>(); } }
     AudioSource Source;
     bool move = true;
@@ -26,6 +28,7 @@ public class Projectile : MonoBehaviour
         if (Source.clip != null)
             Source.Play();
     }
+
 
     public Vector3 Direction
     {
@@ -40,17 +43,13 @@ public class Projectile : MonoBehaviour
             direction = value;
         }
     }
+
     private void Update()
     {
         if (move)
         {
-            //newRotation = transform.rotation;
             transform.up = direction;
-            //quaternion.lookrotation(direction);
             body.velocity = Direction * Speed;
-            //Speed -= 0.01f * Time.deltaTime;
-            //Speed = Mathf.Clamp(Speed, 0, 200);
-            //transform.LookAt(body.velocity,-transform.up);
         }
         //Debug.Log($"not moving :(");
     }
@@ -59,7 +58,7 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
 
-        if (collision.gameObject.layer == IgnoreLayer || LayerMask.LayerToName(collision.gameObject.layer).Contains("Projectile"))
+        if (collision.gameObject.layer == IgnoreLayer || LayerMask.LayerToName(collision.gameObject.layer).Contains(LayerMask.LayerToName(gameObject.layer)))
         {
             //Debug.Log($"Projectile: We hit but ignored: {collision.transform.name} - On layer: {collision.gameObject.layer}");
             return;
@@ -74,7 +73,7 @@ public class Projectile : MonoBehaviour
             body.isKinematic = true;
 
             //transform.position += collision.transform.position;
-            Debug.Log($"Projectile- not ignored : i am: {transform.name} - hit layer: {LayerMask.LayerToName(collision.gameObject.layer)}");
+            //Debug.Log($"Projectile- not ignored : i am: {transform.name} - hit layer: {LayerMask.LayerToName(collision.gameObject.layer)}");
             if (collision.gameObject.tag == EnemyTag)
             {
                 collision.gameObject.GetComponent<Health>().TakeDamage(Damage);
@@ -82,7 +81,8 @@ public class Projectile : MonoBehaviour
             }
             else
             {
-                if (EffectImpact != null) Instantiate(EffectImpact, transform.position, Quaternion.identity, transform.parent);
+                if (EffectImpact != null) 
+                    Instantiate(EffectImpact, transform.position, Quaternion.identity, transform.parent);
             }
             Destroy();
         }

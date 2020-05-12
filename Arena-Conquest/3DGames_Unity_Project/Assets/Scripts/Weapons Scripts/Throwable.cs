@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Throwable : Weapon
 {
+
     public float ThrowPower;
     public GameObject PrjectailPrefab;
+
     public override void Fire(Vector3 direction,Quaternion rotation)
     {
         //Quaternion rotation = Quaternion.Euler(direction);
@@ -16,5 +18,6 @@ public class Throwable : Weapon
         Prjectail.GetComponent<Projectile>().Speed = ThrowPower/2;
         Prjectail.GetComponent<Projectile>().Damage = Damage;
     }
+
 
 }
