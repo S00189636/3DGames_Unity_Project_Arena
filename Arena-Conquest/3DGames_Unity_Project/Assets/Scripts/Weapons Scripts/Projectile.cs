@@ -11,7 +11,8 @@ public class Projectile : MonoBehaviour
     public string EnemyTag;
     public float Damage;
     public float Speed;
-    public LayerMask IgnoreLayer;
+    public string IgnoreTag1;
+    public string IgnoreTag;
     public GameObject EffectImpact;
     public bool DestroyOnImpact = false;
     public float DestroyAfter = 1;
@@ -58,7 +59,9 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
 
-        if (collision.gameObject.layer == IgnoreLayer || collision.gameObject.tag.Equals("Projectile"))
+        if (collision.gameObject.tag.Equals(IgnoreTag1) || 
+            collision.gameObject.tag.Equals(IgnoreTag) ||
+            collision.gameObject.tag.Equals("Projectile"))
         {
             //Debug.Log($"Projectile: We hit but ignored: {collision.transform.name} - On layer: {collision.gameObject.layer}");
             return;

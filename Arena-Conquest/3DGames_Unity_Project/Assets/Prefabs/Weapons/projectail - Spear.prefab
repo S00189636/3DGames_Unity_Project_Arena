@@ -96,7 +96,9 @@ MonoBehaviour:
   Speed: 0
   IgnoreLayer:
     serializedVersion: 2
-    m_Bits: 25600
+    m_Bits: 0
+  IgnoreTag1: Player
+  IgnoreTag: Collectable
   EffectImpact: {fileID: 0}
   DestroyOnImpact: 0
   DestroyAfter: 2

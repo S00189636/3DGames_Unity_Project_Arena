@@ -59,7 +59,9 @@ public class LevelManager : MonoBehaviour
     {
         // show you win screen 
         currentGameState = GameState.GameOver;
+        //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene("YouWin");
+        //SceneManager.SetActiveScene("YouWin");
     }
 
     private void Update()

@@ -22,7 +22,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 800
+        value: 850
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -33,7 +33,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: ScrollText
+    path: 
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -52,7 +52,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: ScrollText/SingelText -You Win
+    path: SingelText -You Win
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -71,7 +71,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: ScrollText/TextWithTitle - SoundEffect
+    path: TextWithTitle - SoundEffect
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -90,7 +90,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: ScrollText/TextWithTitle - Special Thanks
+    path: TextWithTitle - Special Thanks
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -109,7 +109,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: ScrollText/SingelText -Credits
+    path: SingelText -Credits
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -128,7 +128,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: ScrollText/TextWithTitle - Music
+    path: TextWithTitle - Music
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -147,7 +147,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: ScrollText/TextWithTitle - Graphics
+    path: TextWithTitle - Graphics
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -166,7 +166,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: ScrollText/TextWithTitle - Prgrammer
+    path: TextWithTitle - Prgrammer
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -178,56 +178,56 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1722446414
+      path: 2451449662
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 4152968594
+      path: 383497708
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 46322763
+      path: 3446947989
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3695521852
+      path: 686908748
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2816576469
+      path: 2480907244
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 455845481
+      path: 2897070915
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 716299189
+      path: 4055733262
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3737501749
+      path: 0
       attribute: 538195251
       script: {fileID: 0}
       typeID: 224
@@ -260,7 +260,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 800
+        value: 850
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -271,7 +271,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.y
-    path: ScrollText
+    path: 
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -290,7 +290,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: ScrollText/SingelText -You Win
+    path: SingelText -You Win
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -309,7 +309,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: ScrollText/TextWithTitle - SoundEffect
+    path: TextWithTitle - SoundEffect
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -328,7 +328,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: ScrollText/TextWithTitle - Special Thanks
+    path: TextWithTitle - Special Thanks
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -347,7 +347,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: ScrollText/SingelText -Credits
+    path: SingelText -Credits
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -366,7 +366,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: ScrollText/TextWithTitle - Music
+    path: TextWithTitle - Music
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -385,7 +385,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: ScrollText/TextWithTitle - Graphics
+    path: TextWithTitle - Graphics
     classID: 1
     script: {fileID: 0}
   - curve:
@@ -404,7 +404,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: ScrollText/TextWithTitle - Prgrammer
+    path: TextWithTitle - Prgrammer
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves: []

@@ -117,7 +117,9 @@ MonoBehaviour:
   Speed: 10
   IgnoreLayer:
     serializedVersion: 2
-    m_Bits: 28672
+    m_Bits: 4096
+  IgnoreTag1: Enemy
+  IgnoreTag: Projectile
   EffectImpact: {fileID: 0}
   DestroyOnImpact: 1
   DestroyAfter: 1

@@ -258,9 +258,8 @@ MonoBehaviour:
   EnemyTag: Player
   Damage: 0
   Speed: 0
-  IgnoreLayer:
-    serializedVersion: 2
-    m_Bits: 28672
+  IgnoreTag1: Enemy
+  IgnoreTag: Nothing
   EffectImpact: {fileID: 100012, guid: 1f1aa87040db08846a4332981b0a6fa7, type: 3}
   DestroyOnImpact: 0
   DestroyAfter: 1
