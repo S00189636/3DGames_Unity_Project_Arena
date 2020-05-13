@@ -320,6 +320,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a45b455d55f070458fa76b7425e0512, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClipsMoving:
+  - {fileID: 8300000, guid: 3f0121c4e0351a54eafc5025b4a32e2f, type: 3}
+  - {fileID: 8300000, guid: 1b302335d7f6ec04fa65559065214382, type: 3}
+  - {fileID: 8300000, guid: e4678aa59fb926c468f9620c301ed880, type: 3}
+  audioClipsDeath:
+  - {fileID: 8300000, guid: 619f91a3a639956438734480a8f2617d, type: 3}
+  - {fileID: 8300000, guid: 98fa1e726ae78094c87c2f51c994f317, type: 3}
   CenterPoint: {fileID: 4470656581450203442}
   AudioSource: {fileID: 1086830596}
   PrjectailPrefab: {fileID: 2344323551641304299, guid: bf7470af8b014a345998035b2a550852,

@@ -7,7 +7,7 @@ using UnityEngine.AI;
 
 public class AINAVMovement : EnemyBase
 {
-
+    public bool PlayeMovingSoundEffect { get; set; } = false;
     public NavMeshAgent Agent;
     public bool PlayerChangedPos { get { return Agent.destination != PlayerPosition; } }
     public Vector3 PlayerPosition { 
@@ -29,6 +29,7 @@ public class AINAVMovement : EnemyBase
         Agent.isStopped = false;
         Agent.SetDestination(_destination);
         _EnemyCurrentState = EnemyState.Moving;
+        PlayeMovingSoundEffect = true;
     }
 
     public void StopMoving(EnemyState _enemState)

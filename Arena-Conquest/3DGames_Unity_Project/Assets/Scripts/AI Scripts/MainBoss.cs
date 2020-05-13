@@ -15,7 +15,9 @@ public class MainBoss : MonoBehaviour
     public float NormalDamage = 20;
     public float NormalFireRate = 1;
     public float MaxNormalAttackDuration = 10;
-
+    public AudioClip[] HurtSoundEffects;
+    public AudioClip SpawnSoundEffects;
+    public AudioClip MeteorAttackSoundEffects;
 
     public MeteorAttack MeteorAttack;
     public Spawner EnemySpawner;
@@ -25,7 +27,7 @@ public class MainBoss : MonoBehaviour
     public Transform[] NormalFirePoint;
     public MeshRenderer BodyRenderer;
     public GameObject NormalAttackPrefab;
-
+    public AudioSource AudioSource;
 
     private float NormalAttackDuration ;
     private Color NormalColour;
@@ -34,7 +36,7 @@ public class MainBoss : MonoBehaviour
     float SpawningDurationTimer;
     AttackingState CurrentAttackingState = AttackingState.NormalAttack;
     EnemyState CurrentState;
-
+    bool playAttackSoundEffect = true;
 
     AINAVMovement MovementRef { get { return GetComponent<AINAVMovement>(); } }
 
@@ -58,6 +60,14 @@ public class MainBoss : MonoBehaviour
     private void MainBoss_OnTakingDamage(float amount)
     {
         print("this hurts");
+        int i;
+        if(!AudioSource.isPlaying)
+        {
+            i = Random.Range(0, HurtSoundEffects.Length);
+            AudioSource.clip = HurtSoundEffects[i];
+            AudioSource.loop = false;
+            AudioSource.Play();
+        }
         NormalAttackDuration -= (amount/0.3f);
         NormalAttackDuration = Mathf.Clamp(NormalAttackDuration, 20, MaxNormalAttackDuration);
     }
@@ -121,7 +131,13 @@ public class MainBoss : MonoBehaviour
                             }
                             else
                             {
-                                print("Attack my chilldren");
+                                if (!AudioSource.isPlaying && playAttackSoundEffect)
+                                {
+                                    AudioSource.clip = SpawnSoundEffects;
+                                    AudioSource.loop = false;
+                                    AudioSource.Play();
+                                    playAttackSoundEffect = false;
+                                }
                                 EnemySpawner.enabled = true;
                                 SpawningDurationTimer = Time.time + 20;
                             }
@@ -142,6 +158,13 @@ public class MainBoss : MonoBehaviour
                         else
                         {
                             print("Stars attack");
+                            if (!AudioSource.isPlaying && playAttackSoundEffect)
+                            {
+                                AudioSource.clip = MeteorAttackSoundEffects;
+                                AudioSource.loop = false;
+                                AudioSource.Play();
+                                playAttackSoundEffect = false;
+                            }
                             if (MeteorAttack.current == MeteorAttack.state.Spinning)
                                 MeteorAttack.current = MeteorAttack.state.Attacking;
                         }
@@ -161,6 +184,8 @@ public class MainBoss : MonoBehaviour
         CurrentAttackingState = i > 50f ? AttackingState.Spawning : AttackingState.StarAttack;
         NormalColour = BodyRenderer.material.GetColor("_EmissiveColor");
         BodyRenderer.material.SetColor("_EmissiveColor", new Color32(255, 0, 83, 255));
+
+        playAttackSoundEffect = true;
     }
 
     private void SwitchToNormalAttack()

@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class PlutonianAttack : MonoBehaviour
 {
+
     AINAVMovement MovementRef { get { return GetComponent<AINAVMovement>(); } }
 
+    
+
+    public AudioClip[] audioClipsMoving;
+    public AudioClip[] audioClipsDeath;
     public Transform CenterPoint;
     public AudioSource AudioSource;
     public GameObject PrjectailPrefab;
@@ -37,10 +42,18 @@ public class PlutonianAttack : MonoBehaviour
     {
 
         EnemyState currentState = MovementRef.EnemyCurrentState;
+        int i;
         switch (currentState)
         {
             case EnemyState.Moving:
-                print("I will get you");
+               // print("I will get you");
+                if (MovementRef.PlayeMovingSoundEffect && !AudioSource.isPlaying)
+                {
+                    i = Random.Range(0, audioClipsMoving.Length);
+                    AudioSource.clip = audioClipsMoving[i];
+                    AudioSource.Play();
+                    MovementRef.PlayeMovingSoundEffect = false;
+                }
                 break;
 
             case EnemyState.Attacking:
@@ -50,18 +63,17 @@ public class PlutonianAttack : MonoBehaviour
                 lookRotation.x = transform.rotation.x;
                 lookRotation.z = transform.rotation.z;
                 transform.rotation = lookRotation;
-                //transform.LookAt(new Vector3(transform.rotation.x,
-                //    Mathf.Clamp(MovementRef.PlayerPosition.y,-25,20)
-                //    ));
-                //MovementRef.PlayerPosition.y));
                 break;
             case EnemyState.Dead:
                 if (destroy)
                 {
-
                     print("this is not the End @£$% ");
-                    Invoke("Explode", 0.3f);
-                    Destroy(this.gameObject, 0.75f);
+                    // playe sound effect
+                    i = Random.Range(0, audioClipsDeath.Length);
+                    AudioSource.clip = audioClipsDeath[i];
+                    AudioSource.Play();
+                    Invoke("Explode", 0.2f);
+                    Destroy(this.gameObject, AudioSource.clip.length);
                     destroy = false;
                 }
                 break;
@@ -93,4 +105,6 @@ public class PlutonianAttack : MonoBehaviour
     {
         GetComponent<Health>().OnDeath -= PlutonianAttack_OnDeath;
     }
+
+
 }
