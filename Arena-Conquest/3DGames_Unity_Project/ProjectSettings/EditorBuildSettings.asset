@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sci-Fi Level.unity
     guid: 49f80ace2c6d9de4fad9cb3de8867d59
+  - enabled: 1
+    path: Assets/Scenes/YouWin.unity
+    guid: 9f41efd886dc0964eb9ca9920e1b11e8
   m_configObjects: {}

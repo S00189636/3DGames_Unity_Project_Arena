@@ -23,20 +23,19 @@ public class Movement : MonoBehaviour
     private void Start()
     {
         controller = GetComponent<CharacterController>();
-        GetComponent<Health>().OnDeath += Movement_OnDeath;
+        //GetComponent<Health>().OnDeath += Movement_OnDeath;
 
     }
 
-    private void Movement_OnDeath()
-    {
-        print("Player is no more :(");
-    }
+    //private void Movement_OnDeath()
+    //{
+    //    this.gameObject.SetActive(false);
+    //}
 
     private void Update()
     {
 
         Vector3 moveDirection;
-        //float horizontal = Input.GetAxis("Horizontal");
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 

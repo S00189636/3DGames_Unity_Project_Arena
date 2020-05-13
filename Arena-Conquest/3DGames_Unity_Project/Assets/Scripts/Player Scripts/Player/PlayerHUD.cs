@@ -65,6 +65,13 @@ public class PlayerHUD : MonoBehaviour
     }
 
 
-
+    private void OnDisable()
+    {
+        LevelManager.OnEnemyDied -= PlayerHUD_OnEnemyDied;
+        PlayerAttack.OnPlayerFired -= PlayerAttack_OnPlayerFired;
+        PlayerAttack.OnPlayerWeaponDroped -= PlayerAttack_OnPlayerWeaponDroped;
+        playerHealth.OnTakingDamage -= PlayerHUD_OnTakingDamage;
+        Pickup.OnPickup -= PlayerPickup_OnPickup;
+    }
 
 }

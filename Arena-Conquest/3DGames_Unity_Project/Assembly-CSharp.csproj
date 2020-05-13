@@ -80,8 +80,10 @@
     <Compile Include="Assets\Scripts\AI Scripts\PlutonianAttack.cs" />
     <Compile Include="Assets\Scripts\Collectable.cs" />
     <Compile Include="Assets\Scripts\ExplosionDamage.cs" />
+    <Compile Include="Assets\Scripts\GameOverScreen.cs" />
     <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\Healthbar.cs" />
+    <Compile Include="Assets\Scripts\InGameMenuEvents.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\LookAtCamera.cs" />
     <Compile Include="Assets\Scripts\MeteorAttack.cs" />
@@ -94,6 +96,7 @@
     <Compile Include="Assets\Scripts\SelfDestruct.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\Spin.cs" />
+    <Compile Include="Assets\Scripts\TextWithShadow.cs" />
     <Compile Include="Assets\Scripts\Weapons Scripts\Melee.cs" />
     <Compile Include="Assets\Scripts\Weapons Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\Weapons Scripts\Throwable.cs" />
